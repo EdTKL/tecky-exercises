@@ -5,15 +5,16 @@ let columns; /* To be determined by window width */
 let rows; /* To be determined by window height */
 let currentBoard;
 let nextBoard;
-let randomColorR;
-let randomColorG;
-let randomColorB;
+let randomR;
+let randomG;
+let randomB;
+let isPaused = false;
 
 function getRandomColor(){
-  randomColorR = Math.floor(Math.random()*256);
-  randomColorG = Math.floor(Math.random()*256);
-  randomColorB = Math.floor(Math.random()*256);
-  return randomColorR, randomColorG, randomColorB;
+  randomR = Math.floor(Math.random()*256);
+  randomG = Math.floor(Math.random()*256);
+  randomB = Math.floor(Math.random()*256);
+  return randomR, randomG, randomB;
 }
 
 
@@ -22,9 +23,8 @@ function init() {
       for (let j = 0; j < rows; j++) {
         currentBoard[i][j] = 0;
         nextBoard[i][j] = 0;
-      }
-    }
-  }
+      }}
+}
 
 
 function setup() {
@@ -48,11 +48,7 @@ function setup() {
   }
 
 
-// let someVariables = <condictions> : <when_true> : <when_false>;
-// currentBoard[i][j] = random() > 0.8 ? 1 : 0; // one line if
-// nextBoard[i][j] = 0;
-
-  function draw() {
+function draw() {
     background(30);
     generate();
     for (let i = 0; i < columns; i++) {
@@ -64,12 +60,11 @@ function setup() {
         }
         stroke(strokeColor);
         rect(i * unitLength, j * unitLength, unitLength, unitLength);
-          
       }}
     };
 
 
-  function generate() {
+function generate() {
     //Loop over every single box on the board
     for (let x = 0; x < columns; x++) {
       for (let y = 0; y < rows; y++) {
@@ -116,6 +111,7 @@ function setup() {
  * When mouse is dragged
  */
 function mouseDragged() {
+    if(!isPaused){
     /**
      * If the mouse coordinate is outside the board
      */
@@ -128,49 +124,96 @@ function mouseDragged() {
     fill(boxColor);
     stroke(strokeColor);
     rect(x * unitLength, y * unitLength, unitLength, unitLength);
-  }
+  }}
   
   /**
    * When mouse is pressed
    */
-  function mousePressed() {
+function mousePressed() {
+    if (!isPaused){
     noLoop();
     mouseDragged();
-  }
+  }}
   
   /**
    * When mouse is released
    */
-  function mouseReleased() {
+function mouseReleased() {
+    if (!isPaused){
     loop();
-  }
+  }}
+
 
   document.querySelector("#reset-game").addEventListener("click", function () {
     init();
   });
 
-  document.querySelector("#speed").addEventListener("click", function () {
-    frameRate(5);
-  });
+
+function speedBtn() {
+    const speedElm = document.querySelector("#speed");
+    const rangeElm = document.querySelector("#range-container");
+    speedElm.addEventListener('click', function() {
+      if (rangeElm.style.display == "none"){
+        rangeElm.style.display = "block";
+      } else{
+        rangeElm.style.display = "none";
+      }
+  })};
+  speedBtn();
+
 
   // document.querySelector("#rules").addEventListener("click", function () {
   //   init();
   // });
+ 
+function pauseBtn() {
+  const pauseElm = document.querySelector("#pause-resume");
+  pauseElm.addEventListener("click", function() {
+      if (pauseElm.innerHTML === "Pause"){
+        isPaused = true;
+        noLoop();
+        pauseElm.innerHTML = "Resume";
+    } else if (pauseElm.innerHTML === "Resume"){
+        isPaused = false;
+        loop();
+        pauseElm.innerHTML = "Pause";
+      }
+  })};
+  pauseBtn();
 
-  document.querySelector("#start-pause").addEventListener("click", function () {
-    noLoop();
-  });
 
   // document.querySelector("#patterns").addEventListener("click", function () {
   // });
    
+
   // document.querySelector("#resize").addEventListener("click", function () {
   //   init();
   // });
 
-  document.querySelector("#style").addEventListener("click", function () {
-    getRandomColor();
-    boxColor = `rgb(${randomColorR},${randomColorG},${randomColorB})`;
-    getRandomColor();
-    strokeColor = `rgb(${randomColorR},${randomColorG},${randomColorB})`;
-    });
+function styleBtn() {
+    const styleElm = document.querySelector("#style");
+    styleElm.addEventListener("click", function() {
+      getRandomColor();
+      boxColor = `rgb(${randomR},${randomG},${randomB})`;
+      getRandomColor();
+      strokeColor = `rgb(${randomR},${randomG},${randomB})`;
+      const buttons = document.querySelectorAll(".btns");
+      for (const button of buttons){
+        button.style.backgroundColor = boxColor;
+      };
+      for (const button of buttons){
+        button.style.borderColor = strokeColor;
+      };
+      for (let i = 0; i < columns; i++) {
+        for (let j = 0; j < rows; j++) {
+          if (currentBoard[i][j] == 1) {
+            fill(boxColor);
+          } else {
+            fill(30);
+          }
+          stroke(strokeColor);
+          rect(i * unitLength, j * unitLength, unitLength, unitLength);
+        }};
+    })}
+  styleBtn();
+

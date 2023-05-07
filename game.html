@@ -16,13 +16,16 @@
 <body>
     <div id="canvas"></div>
     <div id="button-container">
-        <button id="reset-game">RESET</button>
-        <button id="speed">SPEED</button>
-        <button id="rules">RULES</button>
-        <button id="start-pause">PAUSE</button>
-        <button id="patterns">PATTERNS</button>
-        <button id="resize">RESIZE</button>
-        <button id="style">STYLE</button>
+        <button class=btns id="reset-game">Reset</button>
+        <button class=btns id="speed">
+            <div id="range-container"><input type="range" class="form-range" min="1" max="120" id="fps"></div>
+            Speed
+        </button>
+        <button class=btns id="rules">Rules</button>
+        <button class=btns id="pause-resume">Pause</button>
+        <button class=btns id="patterns">Patterns</button>
+        <button class=btns id="resize">Resize</button>
+        <button class=btns id="style">Colour</button>
     </div>
     <script 
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" 
