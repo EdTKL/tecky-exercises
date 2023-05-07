@@ -1,6 +1,6 @@
 const unitLength = 20;
 let boxColor = `rgb(128,128,0)`;
-const strokeColor = 'rgba(0,180,0, 0)'
+let strokeColor = 'rgba(0,180,0, 0)';
 let columns; /* To be determined by window width */
 let rows; /* To be determined by window height */
 let currentBoard;
@@ -8,7 +8,6 @@ let nextBoard;
 let randomColorR;
 let randomColorG;
 let randomColorB;
-
 
 function getRandomColor(){
   randomColorR = Math.floor(Math.random()*256);
@@ -65,9 +64,9 @@ function setup() {
         }
         stroke(strokeColor);
         rect(i * unitLength, j * unitLength, unitLength, unitLength);
-      }
-    }
-  }
+          
+      }}
+    };
 
 
   function generate() {
@@ -150,41 +149,28 @@ function mouseDragged() {
     init();
   });
 
-  // document.querySelector("#speed").addEventListener("click", function () {
-  //   frameRate(24);
-  // });
+  document.querySelector("#speed").addEventListener("click", function () {
+    frameRate(5);
+  });
 
   // document.querySelector("#rules").addEventListener("click", function () {
   //   init();
   // });
 
-  // document.querySelector("#start-pause").addEventListener("click", function () {
-  //   innerhtml;
-  // });
+  document.querySelector("#start-pause").addEventListener("click", function () {
+    noLoop();
+  });
 
   // document.querySelector("#patterns").addEventListener("click", function () {
-  //   init();
   // });
-
+   
   // document.querySelector("#resize").addEventListener("click", function () {
   //   init();
   // });
 
   document.querySelector("#style").addEventListener("click", function () {
     getRandomColor();
-    boxColor = `rgb(${randomColorR},${randomColorG},${randomColorB})`
-    background(30);
-    generate();
-      for (let i = 0; i < columns; i++) {
-        for (let j = 0; j < rows; j++) {
-          if (currentBoard[i][j] == 1) {
-            fill(boxColor);
-          } else {
-            fill(0);
-          }
-          stroke(strokeColor);
-          rect(i * unitLength, j * unitLength, unitLength, unitLength);
-        }
-      }
-    } 
-  );
+    boxColor = `rgb(${randomColorR},${randomColorG},${randomColorB})`;
+    getRandomColor();
+    strokeColor = `rgb(${randomColorR},${randomColorG},${randomColorB})`;
+    });

@@ -3,7 +3,7 @@ body{
 }
 
 #button-container{
-    background-color: rgb(30, 30, 30));
+    background-color: rgb(30, 30, 30);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
