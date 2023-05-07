@@ -1,6 +1,6 @@
 const unitLength = 20;
 let boxColor = `rgb(128,128,0)`;
-const strokeColor = 'rgba(0,180,0, 0.5)'
+const strokeColor = 'rgba(0,180,0, 0)'
 let columns; /* To be determined by window width */
 let rows; /* To be determined by window height */
 let currentBoard;
@@ -54,14 +54,14 @@ function setup() {
 // nextBoard[i][j] = 0;
 
   function draw() {
-    background(0);
+    background(30);
     generate();
     for (let i = 0; i < columns; i++) {
       for (let j = 0; j < rows; j++) {
         if (currentBoard[i][j] == 1) {
           fill(boxColor);
         } else {
-          fill(0);
+          fill(30);
         }
         stroke(strokeColor);
         rect(i * unitLength, j * unitLength, unitLength, unitLength);
@@ -150,16 +150,16 @@ function mouseDragged() {
     init();
   });
 
-  document.querySelector("#speed").addEventListener("click", function () {
-    frameRate(24);
-  });
+  // document.querySelector("#speed").addEventListener("click", function () {
+  //   frameRate(24);
+  // });
 
   // document.querySelector("#rules").addEventListener("click", function () {
   //   init();
   // });
 
   // document.querySelector("#start-pause").addEventListener("click", function () {
-  //   init();
+  //   innerhtml;
   // });
 
   // document.querySelector("#patterns").addEventListener("click", function () {
@@ -170,6 +170,21 @@ function mouseDragged() {
   //   init();
   // });
 
-  // document.querySelector("#style").addEventListener("click", function () {
-  
-  // });
+  document.querySelector("#style").addEventListener("click", function () {
+    getRandomColor();
+    boxColor = `rgb(${randomColorR},${randomColorG},${randomColorB})`
+    background(30);
+    generate();
+      for (let i = 0; i < columns; i++) {
+        for (let j = 0; j < rows; j++) {
+          if (currentBoard[i][j] == 1) {
+            fill(boxColor);
+          } else {
+            fill(0);
+          }
+          stroke(strokeColor);
+          rect(i * unitLength, j * unitLength, unitLength, unitLength);
+        }
+      }
+    } 
+  );
