@@ -1,5 +1,5 @@
 const unitLength = 20;
-let boxColor = `rgb(128,128,0)`;
+let boxColor = `rgb(128,168,0)`;
 let strokeColor = 'rgba(0,180,0, 0)';
 let columns; /* To be determined by window width */
 let rows; /* To be determined by window height */
@@ -35,7 +35,7 @@ function setup() {
     /*Calculate the number of columns and rows */
     columns = floor(width / unitLength);
     rows = floor(height / unitLength);
-  
+
     /*Making both currentBoard and nextBoard 2-dimensional matrix that has (columns * rows) boxes. */
     currentBoard = [];
     nextBoard = [];
@@ -111,7 +111,6 @@ function generate() {
  * When mouse is dragged
  */
 function mouseDragged() {
-    if(!isPaused){
     /**
      * If the mouse coordinate is outside the board
      */
@@ -124,48 +123,66 @@ function mouseDragged() {
     fill(boxColor);
     stroke(strokeColor);
     rect(x * unitLength, y * unitLength, unitLength, unitLength);
-  }}
+}
   
   /**
    * When mouse is pressed
    */
 function mousePressed() {
-    if (!isPaused){
     noLoop();
     mouseDragged();
-  }}
+}
   
   /**
    * When mouse is released
    */
 function mouseReleased() {
-    if (!isPaused){
+    if (!isPaused) {
     loop();
   }}
 
 
   document.querySelector("#reset-game").addEventListener("click", function () {
     init();
+    draw();
   });
 
 
 function speedBtn() {
     const speedElm = document.querySelector("#speed");
-    const rangeElm = document.querySelector("#range-container");
+    const fpsElm = document.querySelector("#fps");
     speedElm.addEventListener('click', function() {
-      if (rangeElm.style.display == "none"){
-        rangeElm.style.display = "block";
-      } else{
-        rangeElm.style.display = "none";
-      }
-  })};
-  speedBtn();
+        fpsElm.style.display = "block";
+        fpsElm.addEventListener('click', function(){
+          const frame = fpsElm.value;
+          frameRate(parseInt(frame));
+          return frame;
+        })
+      });
+    speedElm.addEventListener('mouseleave', function() {
+        fpsElm.style.display = "none";
+      });
+  }
+speedBtn();
+
+function rulesBtn(){
+  const rulesElm = document.querySelector("#rules");
+  rulesElm.addEventListener("click", function () {
+    const smBtns = document.querySelectorAll("#rules>.sm-btns");
+    for (smBtn of smBtns) {
+      smBtn.style.display = "block";
+    }
+  });
+  rulesElm.addEventListener("mouseleave", function () {
+    const smBtns = document.querySelectorAll("#rules>.sm-btns");
+    for (smBtn of smBtns) {
+      smBtn.style.display = "none";
+    }
+  });
+}
+rulesBtn();
 
 
-  // document.querySelector("#rules").addEventListener("click", function () {
-  //   init();
-  // });
- 
 function pauseBtn() {
   const pauseElm = document.querySelector("#pause-resume");
   pauseElm.addEventListener("click", function() {
@@ -179,41 +196,58 @@ function pauseBtn() {
         pauseElm.innerHTML = "Pause";
       }
   })};
-  pauseBtn();
+pauseBtn();
 
 
-  // document.querySelector("#patterns").addEventListener("click", function () {
-  // });
+function patternsBtn() {
+    const patternsElm = document.querySelector("#patterns");
+    patternsElm.addEventListener("click", function () {
+      const smBtns = document.querySelectorAll("#patterns>.sm-btns");
+      for (smBtn of smBtns) {
+        smBtn.style.display = "block";
+      }
+    });
+    patternsElm.addEventListener("mouseleave", function () {
+      const smBtns = document.querySelectorAll("#patterns>.sm-btns");
+      for (smBtn of smBtns) {
+        smBtn.style.display = "none";
+      }
+    });
+  };
+patternsBtn();
    
 
-  // document.querySelector("#resize").addEventListener("click", function () {
-  //   init();
-  // });
-
 function styleBtn() {
-    const styleElm = document.querySelector("#style");
-    styleElm.addEventListener("click", function() {
-      getRandomColor();
-      boxColor = `rgb(${randomR},${randomG},${randomB})`;
-      getRandomColor();
-      strokeColor = `rgb(${randomR},${randomG},${randomB})`;
-      const buttons = document.querySelectorAll(".btns");
+  const styleElm = document.querySelector("#style");
+  styleElm.addEventListener("click", function() {
+    getRandomColor();
+    boxColor = `rgb(${randomR},${randomG},${randomB})`;
+    getRandomColor();
+    strokeColor = `rgb(${randomR},${randomG},${randomB})`;
+
+    const buttons = document.querySelectorAll(".btns");
       for (const button of buttons){
         button.style.backgroundColor = boxColor;
-      };
-      for (const button of buttons){
         button.style.borderColor = strokeColor;
       };
-      for (let i = 0; i < columns; i++) {
-        for (let j = 0; j < rows; j++) {
-          if (currentBoard[i][j] == 1) {
-            fill(boxColor);
-          } else {
+    const smButtons = document.querySelectorAll(".sm-btns");
+      for (const smButton of smButtons){
+        smButton.style.backgroundColor = boxColor;
+        smButton.style.borderColor = strokeColor;
+      };
+   
+    for (let i = 0; i < columns; i++) {
+      for (let j = 0; j < rows; j++) {
+        if (currentBoard[i][j] == 1) {
+          fill(boxColor);
+        } else {
             fill(30);
           }
-          stroke(strokeColor);
-          rect(i * unitLength, j * unitLength, unitLength, unitLength);
-        }};
-    })}
-  styleBtn();
+        stroke(strokeColor);
+        rect(i * unitLength, j * unitLength, unitLength, unitLength);
+      }
+    };
+  })
+}
+styleBtn();
 
