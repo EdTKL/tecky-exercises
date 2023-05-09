@@ -68,15 +68,15 @@ function draw() {
 
 
 function drawCurrentOnly() {
-    for (let x = 0; x < columns; x++) {
-      for (let y = 0; y < rows; y++) {
-        if (currentBoard[x][y] == 1) {
+    for (let i = 0; i < columns; i++) {
+      for (let j = 0; j < rows; j++) {
+        if (currentBoard[i][j] == 1) {
           fill(boxColor);
         } else {
           fill(30);
         }
         stroke(strokeColor);
-        rect(x * unitLength, y * unitLength, unitLength, unitLength);
+        rect(i * unitLength, j * unitLength, unitLength, unitLength);
       }
     }
   };
@@ -111,8 +111,8 @@ function generate() {
           // New life due to Reproduction
           nextBoard[x][y] = 1;
           // Sound effect
-          let index = x % 7;
-          sounds[index].play();
+          // let index = x % 7;
+          // sounds[index].play();
        
         } else {
           // Stasis
@@ -190,22 +190,22 @@ function speedBtn() {
   }
 speedBtn();
 
-// function rulesBtn(){
-//   const rulesElm = document.querySelector("#rules");
-//   rulesElm.addEventListener("click", function () {
-//     const smBtns = document.querySelectorAll("#rules>.sm-btns");
-//     for (smBtn of smBtns) {
-//       smBtn.style.display = "block";
-//     }
-//   });
-//   rulesElm.addEventListener("mouseleave", function () {
-//     const smBtns = document.querySelectorAll("#rules>.sm-btns");
-//     for (smBtn of smBtns) {
-//       smBtn.style.display = "none";
-//     }
-//   });
-// }
-// rulesBtn();
+function rulesBtn(){
+  const rulesElm = document.querySelector("#rules");
+  rulesElm.addEventListener("click", function () {
+    const smBtns = document.querySelectorAll("#rules>.sm-btns");
+    for (smBtn of smBtns) {
+      smBtn.style.display = "block";
+    }
+  });
+  rulesElm.addEventListener("mouseleave", function () {
+    const smBtns = document.querySelectorAll("#rules>.sm-btns");
+    for (smBtn of smBtns) {
+      smBtn.style.display = "none";
+    }
+  });
+}
+rulesBtn();
 
 
 function pauseBtn() {

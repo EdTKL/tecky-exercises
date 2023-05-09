@@ -32,11 +32,11 @@ body{
     display: none;
 }
 
-/* #rules{
+#rules{
     align-items: center;
     display: flex;
     flex-wrap: wrap;   
-} */
+}
 
 .sm-btns{
     background-color: rgb(128, 168, 0);
