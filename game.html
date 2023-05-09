@@ -11,29 +11,37 @@
         crossorigin="anonymous"
     >
     <link rel="stylesheet" href="game.css" >
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.sound.min.js"></script>
+    <audio id="sound0" src="game/sound0.wav"></audio>
+    <audio id="sound1" src="game/sound1.wav"></audio>
+    <audio id="sound2" src="game/sound2.wav"></audio>
+    <audio id="sound3" src="game/sound3.wav"></audio>
+    <audio id="sound4" src="game/sound4.wav"></audio>
+    <audio id="sound5" src="game/sound5.wav"></audio>
     <title>GAME</title>
 </head>
 <body>
     <div id="canvas"></div>
     <div id="button-container">
-        <button class=btns id="reset-game">Reset</button>
-        <button class=btns id="speed">
-            <input type="range" class="form-range" min="1" max="120" id="fps">
-            Speed
-        </button>
-        <div class=btns id="rules">Rules
-            <button class=sm-btns id="surv">Survival</button>
-            <button class=sm-btns id="repro">Reproduction</button>
-        </div>
-        <button class=btns id="pause-resume">Pause</button>
-        <div class=btns id="patterns">Patterns
-            <button class=sm-btns id="ggg">Gosper Glider Gun</button>
-            <button class=sm-btns id="gld">Glider</button>
-            <button class=sm-btns id="lwt">Lightweight Train</button>
-        </div>
-        <button class=btns id="resize">Resize</button>
-        <button class=btns id="style">Style</button>
+            <button class=btns id="reset-game">Reset</button>
+            <button class=btns id="speed">
+                <input type="range" class="form-range" min="1" max="120" id="fps">
+                Speed
+            </button>
+            <!-- <div class=btns id="rules">Rules
+                <button class=sm-btns id="surv">Survival</button>
+                <button class=sm-btns id="repro">Reproduction</button>
+            </div> -->
+            <button class=btns id="pause-resume">Pause</button>
+            <div class=btns id="patterns">Patterns
+                <button class=sm-btns id="ggg">Gosper Glider Gun</button>
+                <button class=sm-btns id="gld">Glider</button>
+                <button class=sm-btns id="lws">Lightweight Spaceship</button>
+            </div>
+            <!-- <button class=btns id="resize">Resize</button> -->
+            <button class=btns id="style">Style</button>
     </div>
+     
     <script 
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"

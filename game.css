@@ -2,6 +2,10 @@ body{
     background-color: rgb(30, 30, 30); 
 }
 
+#canvas{
+    margin: 5px;
+}
+
 #button-container{
     background-color: rgb(30, 30, 30);
     display: flex;
@@ -28,11 +32,11 @@ body{
     display: none;
 }
 
-#rules{
+/* #rules{
     align-items: center;
     display: flex;
     flex-wrap: wrap;   
-}
+} */
 
 .sm-btns{
     background-color: rgb(128, 168, 0);
@@ -61,5 +65,5 @@ body{
 #patterns{
     align-items: center;
     display: flex;
-    flex-wrap: wrap;   
+    flex-wrap: wrap; 
 }

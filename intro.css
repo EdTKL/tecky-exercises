@@ -1,0 +1,45 @@
+
+    body {
+      background-color: rgb(30, 30, 30);
+      color: rgb(128,168,0);
+    }
+
+    .container {
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 5rem;
+      font-family: 'Bebas Neue', cursive;
+      margin-bottom: 50px;
+      animation:spin 2s linear;
+    }
+
+    p {
+      font-size: 3rem;
+      font-family: 'Bebas Neue', cursive;
+      margin-bottom: 10px;
+      animation:spin 4s linear;
+    }
+
+    #edu {
+        font-size: 2rem;
+        font-family: 'Bebas Neue', cursive;
+        margin-bottom: 5px;
+        animation:spin 6s linear;
+        
+      }
+
+    #exp {
+        font-size: 2rem;
+        font-family: 'Bebas Neue', cursive;
+        margin-bottom: 10px;
+        animation:spin 8s linear;
+      }
+
+    @keyframes spin {
+        0% { opacity: 0; }
+        50% { opacity: 0.5; }
+        100% { opacity: 1; }
+        }
