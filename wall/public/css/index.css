@@ -1,0 +1,21 @@
+body{
+    background-image: url("/assets/brickWall.jpg");
+    background-size: 100%;
+    background-color: rgb(132, 42, 3);
+}
+
+#content{
+    margin: 20px;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+
+}
+
+.memo{
+    background-color: rgb(213, 213, 107);
+    width: 200px;
+    height: 200px;
+    margin: 15px;
+    box-shadow: 10px 10px 15px rgb(35, 34, 34);
+}
