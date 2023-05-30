@@ -61,15 +61,16 @@ body{
 #content{
     height:auto;
     width:auto;
-    background: #D9D9D9;
-    border-radius: 15px 15px 0px 0px;
+    padding: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    padding: 20px;
 
+    background: #D9D9D9;
+    border-radius: 15px 15px 0px 0px;
 }
 
+/* PLAN *//* PLAN *//* PLAN */
 #plan-container{
     box-sizing: border-box;
     width: auto;
@@ -82,68 +83,10 @@ body{
     border-radius: 15px;
 }
 
-#plan-container input:not(.travelBoxes){
-    box-sizing: border-box;
-    width: 250px;
-    height: 50px;
-    padding-left: 10px;
-    padding-right: 10px;
-    background: #D9D9D9;
-    border: 1px solid #494D55;
-    border-radius: 10px;
-}
-
-#travelFrame{    
-    box-sizing: border-box;
-    width: auto;
-    height: auto;
-    padding: 15px;
-    background: #D9D9D9;
-    border: 1px solid #494D55;
-    border-radius: 10px;
-    display: flex;
-
-}
-
-#travelFrame>div{
-    margin: 15px;
-}
-
-#plan-container .inputTxt{
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    margin: 0px;
-    color: #494D55;
-}
-
-.travelBoxes{
-    width: 20px;
-    height: 20px;
-    background: #D9D9D9;
-    border: 1px solid #494D55;
-    border-radius: 10px;
-}
-
-
-/* Task Forms */
-#task-container{
-    box-sizing: border-box;
-    width: 450px;
-    height: 700px;
-    padding: 10px;
-    margin: 20px;
-    background: #D9D9D9;
-    border: 6px solid #B0B409;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 15px;
-}
-
 h3{
     width: 187px;
     height: 56px;
-    margin: 10px 0px 0px 25px;
+    margin: 0px 0px 0px 10px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: bold;
@@ -153,50 +96,148 @@ h3{
     color: #494D55;
 }
 
-label{
-    position: relative;
-    margin: 20px;
-    text-align: center;
+#plan-form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.inputLabel{
+#plan-form>div{
+    position: relative;
+}
+
+#plan-container input:not(.travelBoxes){
+    box-sizing: border-box;
+    margin: 10px 10px 10px 10px;
+    width: 200px;
+    height: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    background: #D9D9D9;
+    border: 1px solid #494D55;
+    border-radius: 10px;
+    color: #494D55;
+}
+
+#plan-container label:not(.frameLabels){
     position: absolute;
-    left: 50px;
-    top: -20px;
-    padding: 5px;
+    left: 25px;
+    top: -3px;
+    padding: 0px 5px 0px 5px;
     margin: 0px;
     width: auto;
     height: auto;
     z-index: 1;
     background: #D9D9D9;
     
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: #494D55;
 }
 
-#task-container input:not(#priority){
+#travelFrame{    
     box-sizing: border-box;
-    width: 380px;
+    margin: 10px 10px 10px 10px;
+    width: 420px;
     height: 50px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 15px;
+    background: #D9D9D9;
+    border: 1px solid #494D55;
+    border-radius: 10px;
+    /* text-align: center; */
+}
+
+.frameLabels{
+    color: #494D55;
+}
+
+#travelFrame>p{
+    position: absolute;
+    left: 15px;
+    top: -14px;
+    padding: 0px 5px 0px 5px;
+    margin: 0px;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    background: #D9D9D9;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: #494D55;
+}
+
+.travelBoxes{
+    margin-right: 25px;
+    width: 20px;
+    height: 20px;
     background: #D9D9D9;
     border: 1px solid #494D55;
     border-radius: 10px;
 }
 
 
-#priorityLabel{
+/* TASK *//* TASK *//* TASK */
+#task-container{
+    box-sizing: border-box;
+    width: 400px;
+    height: 600px;
+    padding: 10px;
+    margin: 20px;
+    background: #D9D9D9;
+    border: 6px solid #B0B409;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+#task-form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+#task-form>div{
+    position: relative;
+}
+
+#task-container label:not(#priorityLabel){
     position: absolute;
-    left: 50px;
-    top: -20px;
-    padding: 5px;
+    left: 30px;
+    top: 2px;
+    padding: 0px 5px 0px 5px;
     margin: 0px;
     width: auto;
     height: auto;
     z-index: 1;
     background: #D9D9D9;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: #494D55;
+}
+
+#task-container input:not(#priority){
+    box-sizing: border-box;
+    text-align: center;
+    width: 340px;
+    height: 50px;
+    margin: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: #D9D9D9;
+    color: #494D55;
+    border: 1px solid #494D55;
+    border-radius: 10px;
 }
 
 #priorityFrame{
+    margin: 15px;
     box-sizing: border-box;
     width: 230px;
     height: 90px;
@@ -204,14 +245,28 @@ label{
     background: #D9D9D9;
     border: 1px solid #494D55;
     border-radius: 10px;
+    text-align: center;
 }
 
-#priorityTxt{
+#priorityFrame>p{
+    position: absolute;
+    left: 15px;
+    top: -14px;
+    padding: 0px 5px 0px 5px;
+    margin: 0px;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    background: #D9D9D9;
     font-family: 'Poppins';
     font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    margin: 0px;
+    font-weight: normal;
+    font-size: 16px;
+    color: #494D55;
+    
+}
+
+#priorityLabel{
     color: #494D55;
 }
 
@@ -224,7 +279,7 @@ label{
     border-radius: 10px;
 }
 
-
+/* BUTTONS *//* BUTTONS *//* BUTTONS */
 #btn-panel{
     position: sticky;
     width: 50px;

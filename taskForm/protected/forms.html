@@ -47,99 +47,74 @@
         </div>
     </nav>
     <div id="content">
-        <!------ Plan Input ------><!------ Plan Input ------><!------ Plan Input ------>
+        <!------ PLAN ------><!------ PLAN ------><!------ PLAN ------>
         <div id="plan-container">     
           <h3>What's Your Plan?</h3>
           <form id="plan-form">
-            <label for="taskLocation">
-              <p class="inputLabel">Plan Name</p>
-              <input type="text" name="planName" id="planName"  required>
-            </label>
-            <label for="date">
-              <p class="inputLabel">Date</p>
-              <input type="date" name="planDate" id="planDate" required>
-            </label>
-            <label for="startLocation">
-              <p class="inputLabel">Starting Location</p>
-            <input type="text" name="startLocation" id="startLocation" />
-            </label>
-            <label for="startLocation">
-              <p class="inputLabel">Return Location</p>
-            <input type="text" name="returnLocation" id="returnLocation" />
-            </label>
-            <label for="startTime">
-              <p class="inputLabel">Starting Time</p>
-              <input type="time" name="startTime" id="startTime" value="09:00">
-            </label>
-            <label for="endTime">
-              <p class="inputLabel">Ending Time</p>
-              <input type="time"  name="endTime" id="endTime" value="21:00">
-            </label>
-            <label for="lunchStart">
-              <p class="inputLabel">Lunch Starts</p>
-              <input type="time" name="lunchStart" id="lunchStart" value="12:30">
-            </label>
-            <label for="lunchEnd">
-              <p class="inputLabel">Lunch Ends</p>
-              <input type="time" name="lunchEnd" id="lunchEnd" value="13:30">
-            </label>
-            <label for="dinnerStart">
-              <p class="inputLabel">Dinner Starts</p>
-              <input type="time" name="dinnerStart" id="dinnerStart" value="19:30">
-            </label>
-            <label for="dinnerEnd">
-              <p class="inputLabel">Dinner Ends</p>
-              <input type="time" name="dinnerEnd" id="dinnerEnd" value="20:30">
-            </label>
-            <label for="travelMethod">
-              <p class="inputLabel" id="priorityLabel">Travel Method</p>
-              <div id="travelFrame">
-                <div>
-                  <p class="inputTxt" id="pubTransTxt">Public Transport</p>
-                  <input type="checkbox" name="pubTrans" class="travelBoxes" id="pubTrans" />
-                </div>
-                <div><p class="inputTxt" id="walkTxt">Walking</p>
-                  <input type="checkbox" name="walk" class="travelBoxes" id="walk" />
-                </div>
-                <div>
-                  <p class="inputTxt" id="driveTxt">Driving</p>
-                  <input type="checkbox" name="drive" class="travelBoxes" id="drive" />
-                </div>
-              </form>              
-            </div>
-          </label>   
+            <div>
+              <label for="planName">Plan Name</label>
+              <input type="text" name="planName" id="planName" required></div>
+            <div>
+              <label for="planDate">Date</label>
+              <input type="date" name="planDate" id="planDate" required></div>
+            <div>
+              <label for="startLocation">Starting Location</label>
+              <input type="text" name="startLocation" id="startLocation" /></div>
+            <div>
+              <label for="returnLocation">Return Location</label>
+              <input type="text" name="returnLocation" id="returnLocation"></div>  
+            <div>
+              <label for="startTime">Starting Time</label>
+              <input type="time" name="startTime" id="startTime" value="09:00"></div>
+            <div>
+              <label for="endTime">Ending Time</label>
+              <input type="time"  name="endTime" id="endTime" value="21:00"></div>  
+            <div>
+              <label for="lunchStart">Lunch Starts</label>
+              <input type="time" name="lunchStart" id="lunchStart" value="12:30"></div>  
+            <div>
+              <label for="lunchEnd">Lunch Ends</label>
+              <input type="time" name="lunchEnd" id="lunchEnd" value="13:30"></div>          
+            <div>
+              <label for="dinnerStart">Dinner Start</label>
+              <input type="time" name="dinnerStart" id="dinnerStart" value="19:30"></div>  
+            <div>
+              <label for="dinnerEnd">Dinner Ends</label>
+              <input type="time" name="dinnerEnd" id="dinnerEnd" value="20:30"></div>  
+            <div id="travelFrame">
+                <p id="travelMethod">Travel Method</p>
+                <label class="frameLabels" for="pubTrans">Public Transport</label>
+                <input type="checkbox" name="pubTrans" class="travelBoxes" id="pubTrans">
+                <label class="frameLabels" for="walk">Walking</label>
+                <input type="checkbox" name="walk" class="travelBoxes" id="walk">
+                <label class="frameLabels" for="drive">Driving</label>
+                <input type="checkbox" name="drive" class="travelBoxes" id="drive">
+              </div>
+          </form>              
         </div>
-        <!------ Task Input ------><!------ Task Input ------><!------ Task Input ------>
+        <!------ TASK ------><!------ TASK ------><!------ TASK ------>
         <div id="task-container">
           <h3>Task 1 Input</h3>
           <form id="task-form">
-            <label for="taskDescription">
-              <p class="inputLabel">Task Description</p>
-              <input type="text" name="taskDescription" id="taskDescription" />
-              
-            </label>
-            <label for="taskDuration">
-              <p class="inputLabel">Task Duration</p>
-              <input type="number" min="0" name="taskDuration" id="taskDuration" placeholder="0" required/>
-            </label>
-            <label for="taskLocation">
-              <p class="inputLabel">Location</p>
-              <input type="text" name="taskLocation" id="taskLocation" />
-            </label>
-            <label for="remarks">
-              <p class="inputLabel">Remarks</p>
-              <input type="text" name="remarks" id="remarks" />
-            </label>
-            <label for="priority">
-              <p class="inputLabel" id="priorityLabel">Priority</p>
-              <div id="priorityFrame">
-                <p class="inputTxt" id="priorityTxt">Must be done?</p>
-                <input type="checkbox" name="priority" id="priority" />
-              </div>
-            </label>       
+            <div>
+              <label for="taskDescription">Task Description</label>
+              <input type="text" name="taskDescription" id="taskDescription" /></div>
+            <div>
+              <label for="taskDuration">Task Duration</label>
+              <input type="number" min="0" name="taskDuration" id="taskDuration" value="1" required/></div>
+            <div>
+              <label for="taskLocation">Location</label>
+              <input type="text" name="taskLocation" id="taskLocation"></div>
+            <div>
+              <label for="remarks">Remarks</label>
+              <input type="text" name="remarks" id="remarks"></div>
+            <div id="priorityFrame">
+              <p id="priorityFrameTxt">Priority</p>
+              <label id="priorityLabel" for="priority">Must be done?</label>
+              <input type="checkbox" name="priority" id="priority"></div>
           </form>
         </div>
-        <!------ BUTTON PANEL ------><!------ BUTTON PANEL------><!------ BUTTON PANEL ------>
+        <!------ BUTTONS ------><!------ BUTTONS------><!------ BUTTONS ------>
         <div id="btn-panel">
           <button type="submit" id="add-btn">
             <i class="bi bi-plus-square-fill" id="add-btn-i"></i>
@@ -148,9 +123,7 @@
             <i class="bi bi-check-square-fill" id="ok-btn-i"></i>
           </button> 
         </div>
-        <div id="bottom-bar">
 
-        </div>
     </div>
 
 
