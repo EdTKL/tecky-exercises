@@ -9,6 +9,7 @@
     <link rel="stylesheet" 
         href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="forms.css">
+    <link rel="stylesheet" href="nav-bar.css">
     <title>Planner</title>
 </head>
 <body>
@@ -50,7 +51,7 @@
         <!------ PLAN ------><!------ PLAN ------><!------ PLAN ------>
         <div id="plan-container">     
           <h3>What's Your Plan?</h3>
-          <form id="plan-form">
+          <form action="/forms" id="plan-form">
             <div>
               <label for="planName">Plan Name</label>
               <input type="text" name="planName" id="planName" required></div>
@@ -83,53 +84,82 @@
               <input type="time" name="dinnerEnd" id="dinnerEnd" value="20:30"></div>  
             <div id="travelFrame">
                 <p id="travelMethod">Travel Method</p>
-                <label class="frameLabels" for="pubTrans">Public Transport</label>
-                <input type="checkbox" name="pubTrans" class="travelBoxes" id="pubTrans">
-                <label class="frameLabels" for="walk">Walking</label>
-                <input type="checkbox" name="walk" class="travelBoxes" id="walk">
-                <label class="frameLabels" for="drive">Driving</label>
-                <input type="checkbox" name="drive" class="travelBoxes" id="drive">
-              </div>
+                <div>
+                  <label class="frameLabels" for="pubTrans">Public Transport</label>
+                  <input type="checkbox" name="pubTrans" class="travelBoxes" id="pubTrans"></div>
+                <div>
+                  <label class="frameLabels" for="walk">Walking</label>
+                  <input type="checkbox" name="walk" class="travelBoxes" id="walk"></div>
+                <div>
+                  <label class="frameLabels" for="drive">Driving</label>
+                  <input type="checkbox" name="drive" class="travelBoxes" id="drive"></div>
+            </div>
           </form>              
         </div>
         <!------ TASK ------><!------ TASK ------><!------ TASK ------>
-        <div id="task-container">
-          <h3>Task 1 Input</h3>
-          <form id="task-form">
-            <div>
-              <label for="taskDescription">Task Description</label>
-              <input type="text" name="taskDescription" id="taskDescription" /></div>
-            <div>
-              <label for="taskDuration">Task Duration</label>
-              <input type="number" min="0" name="taskDuration" id="taskDuration" value="1" required/></div>
-            <div>
-              <label for="taskLocation">Location</label>
-              <input type="text" name="taskLocation" id="taskLocation"></div>
-            <div>
-              <label for="remarks">Remarks</label>
-              <input type="text" name="remarks" id="remarks"></div>
-            <div id="priorityFrame">
-              <p id="priorityFrameTxt">Priority</p>
-              <label id="priorityLabel" for="priority">Must be done?</label>
-              <input type="checkbox" name="priority" id="priority"></div>
-          </form>
+        <div id="task-list">
+          <div class="task-container">
+            <div class="task-header">
+              <div><h3>Task&nbsp</h3><h3 class="task-count">1</h3><h3>&nbspInput</h3></div>
+              <div><button class="del-btn">
+                <i class="bi bi-x-square-fill del-btn-i"></i></button></div>
+            </div>
+            <form class="task-form">
+              <div>
+                <label for="taskDescription">Task Description</label>
+                <input type="text" name="taskDescription" id="taskDescription" required/>
+              </div>
+              <div>
+                <label for="taskDuration">Task Duration</label>
+                <input type="number" min="0" name="taskDuration" id="taskDuration" value="1" required/>
+              </div>
+              <div>
+                <label for="taskLocation">Location</label>
+                <input type="text" name="taskLocation" id="taskLocation" required>
+              </div>
+              <div>
+                <label for="remarks">Remarks</label>
+                <input type="text" name="remarks" id="remarks">
+              </div>
+              <div class="priorityFrame">
+                <p class="priorityFrameTxt">Priority</p>
+                <div>
+                  <label class="priorityLabel" for="priority">Must be done?</label>
+                  <input type="checkbox" name="priority" class="priority" id="priority">
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
-        <!------ BUTTONS ------><!------ BUTTONS------><!------ BUTTONS ------>
         <div id="btn-panel">
-          <button type="submit" id="add-btn">
-            <i class="bi bi-plus-square-fill" id="add-btn-i"></i>
-          </button>
-          <button type="submit" id="ok-btn">
-            <i class="bi bi-check-square-fill" id="ok-btn-i"></i>
-          </button> 
+          <div id="add-div">
+            <button id="add-btn">
+              <i class="bi bi-plus-square-fill" id="add-btn-i"></i></button></div>
+          <div id="save-div">
+            <button type="submit" id="save-btn">
+            <i class="bi bi-arrow-up-square-fill" id="save-btn-i"></i></button></div>
+          <div id="ok-div">
+            <button type="submit" id="ok-btn">
+            <i class="bi bi-check-square-fill" id="ok-btn-i"></i></button></div>
         </div>
-
+        <button id=gpt-btn class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+          AI</button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+          <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+          ...
+          </div>
+        </div>
     </div>
 
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" 
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-    <script src="forms.js"></script>
+        <script src="hmac.js"></script>   
+        <script src="forms.js"></script>
 </body>
 </html>

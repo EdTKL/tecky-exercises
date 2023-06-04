@@ -11,7 +11,7 @@ CREATE TABLE users (
 
 CREATE TABLE plans (
     id SERIAL primary key,
-    plan_name VARCHAR(100) not null unique,
+    plan_name VARCHAR(100) not null,
     plan_date date not null,
     start_location VARCHAR(100) not null,
     return_location VARCHAR(100),
@@ -39,33 +39,43 @@ CREATE TABLE "tasks" (
     foreign key (plan_id) references plans(id)
 );
 
-INSERT INTO plans (
-    plan_name,
-    plan_date,
-    start_location,
-    return_location,
-    start_time,
-    end_time,
-    lunch_start,
-    lunch_end,
-    dinner_start,
-    dinner_end,
-    pub_trans,
-    walk,
-    drive,
-    user_id
-) VALUES (
-    'Test Plan',
-    '2023-05-31',
-    'Tsuen Wan',
-    'Tsim Sha Tsui',
-    '09:00',
-    '22:00',
-    '12:30',
-    '13:30',
-    '18:30',
-    '19:30',
-    true,
-    false,
-    true,
-)
+-- INSERT INTO users (
+--     username,
+--     email,
+--     password
+-- ) VALUES (
+-- 'Felix'
+-- 'felix@felix.com'
+-- '123'
+-- );
+
+-- INSERT INTO plans (
+--     plan_name,
+--     plan_date,
+--     start_location,
+--     return_location,
+--     start_time,
+--     end_time,
+--     lunch_start,
+--     lunch_end,
+--     dinner_start,
+--     dinner_end,
+--     pub_trans,
+--     walk,
+--     drive,
+--     user_id
+-- ) VALUES (
+--     'Test Plan',
+--     '2023-05-31',
+--     'Tsuen Wan',
+--     'Tsim Sha Tsui',
+--     '09:00',
+--     '22:00',
+--     '12:30',
+--     '13:30',
+--     '18:30',
+--     '19:30',
+--     true,
+--     false,
+--     true,
+-- )
