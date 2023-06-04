@@ -1,16 +1,15 @@
 body{
-    background: #004B7D;
+    background: linear-gradient(90deg, rgb(15, 0, 0) 0%, rgba(94,25,9,1) 12.5%, rgba(92,64,7,1) 25%, rgba(84,82,6,1) 37.5%, rgba(33,79,6,1) 50%, rgba(7,63,83,1) 62.5%, rgba(18,22,74,1) 75%, rgba(56,16,74,1) 87.5%, rgb(10, 0, 15) 100%);
 }
 
 #content{
     height:auto;
     width:auto;
     padding: 20px;
-    /* display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start; */
-    background: #c7d1de;
-    border-radius: 15px 15px 0px 0px;
+    /* background: linear-gradient(140deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 60%, rgba(94,25,9,1) 65%, rgba(92,64,7,1) 70%, rgba(84,82,6,1) 75%, rgba(33,79,6,1) 80%, rgba(7,63,83,1) 85%, rgba(18,22,74,1) 90%, rgba(56,16,74,1) 95%); */
+    background: linear-gradient(140deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 60%, rgba(94,25,9,1) 65%, rgba(92,64,7,1) 70%, rgba(84,82,6,1) 75%, rgba(33,79,6,1) 80%, rgba(7,63,83,1) 85%, rgba(18,22,74,1) 90%, rgba(56,16,74,1) 95%);
+    /* background: linear-gradient(140deg, rgba(0,0,0,1) 0%, rgba(94,25,9,1) 12.5%, rgba(92,64,7,1) 25%, rgba(84,82,6,1) 37.5%, rgba(33,79,6,1) 50%, rgba(7,63,83,1) 62.5%, rgba(18,22,74,1) 75%, rgba(56,16,74,1) 87.5%); */
+    border-radius: 25px 25px 0px 0px;
 }
 
 /* PLAN *//* PLAN *//* PLAN */
@@ -18,30 +17,28 @@ body{
     box-sizing: border-box;
     width: auto;
     height: auto;
-    padding: 10px;
+    padding: 5px 5px 15px 5px;
     margin: 15px;
-    background: #eeeeee;
-    border: 2px solid #097bb4;
-    border-top: 20px solid #097bb4;
+    background:#0109432d;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 15px;
+    border-radius:25px;
 }
 
 h3{
     width: auto;
     height: 56px;
     margin: 0px 0px 0px 0px;
-    font-family: 'Poppins';
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 22px;
     display: flex;
     align-items: center;
-    color: #494D55;
+    color: #D9D9D9;
 }
 
 #plan-container>h3{
-    margin: 0px 10px 0px;
+    margin: 10px 0px 20px 30px;
 }
 
 #plan-form{
@@ -54,36 +51,35 @@ h3{
     position: relative;
 }
 
-#plan-container input:not(.travelBoxes){
+#plan-form input:not(.travelBoxes){
     box-sizing: border-box;
-    margin: 10px 10px 10px 10px;
+    margin: 10px 10px 30px 10px;
     width: 280px;
     height: 50px;
     padding-left: 10px;
     padding-right: 10px;
     text-align: center;
-    background: #eeeeee;
-    border: 1px solid #494D55;
-    border-radius: 10px;
-    color: #494D55;
+    background: rgba(0, 0, 0, 0);
+    border: 2px solid #d9d9d96f;
+    border-radius: 15px;
+    color: #D9D9D9;
 }
 
-#plan-container label:not(.frameLabels){
+#plan-form label:not(.frameLabels){
     position: absolute;
     left: 25px;
-    top: -3px;
+    top: -15px;
     padding: 0px 5px 0px 5px;
     margin: 0px;
     width: auto;
     height: auto;
     z-index: 1;
-    background: #eeeeee;
-    
-    font-family: 'Poppins';
+
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
-    color: #494D55;
+    color: #D9D9D9;
 }
 
 #travelFrame{    
@@ -92,32 +88,27 @@ h3{
     width: 420px;
     height: 80px;
     padding: 15px;
-    background: #eeeeee;
-    border: 1px solid #494D55;
-    border-radius: 10px;
+    background: rgba(0, 0, 0, 0);
+    border: 2px solid #d9d9d96f;
+    border-radius: 15px;
     display: flex;
     justify-content: space-around;
-}
-
-.frameLabels{
-    color: #494D55;
 }
 
 #travelFrame>p{
     position: absolute;
     left: 15px;
-    top: -14px;
+    top: -27px;
     padding: 0px 5px 0px 5px;
     margin: 0px;
     width: auto;
     height: auto;
     z-index: 1;
-    background: #eeeeee;
-    font-family: 'Poppins';
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
-    color: #494D55;
+    color: #D9D9D9;
 }
 
 #travelFrame>div{
@@ -126,13 +117,15 @@ h3{
     align-items: center;
 }
 
+.frameLabels{
+    color: #D9D9D9;
+}
+
 .travelBoxes{
     margin-top: 5px;
     width: 20px;
     height: 20px;
-    background: #D9D9D9;
-    border: 1px solid #494D55;
-    border-radius: 20px;
+    opacity: 0.75;
 }
 
 
@@ -140,14 +133,43 @@ h3{
 #task-list{
     display: flex;
     flex-wrap: wrap;
-
 }
+
+.task-container{
+    position: relative;
+    box-sizing: border-box;
+    width: 330px;
+    height: 540px;
+    padding: 5px;
+    margin: 15px;
+    background: #9084042b;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+}
+
+@keyframes fadeIn{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.fade-in {
+    animation: fadeIn 1s;
+}
+
+/* @keyframes fadeOut{
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+.fade-out {
+    animation: fadeOut 1s;
+} */
 
 .task-header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0px 10px 0px;
+    margin: 0px 20px 15px 30px;
 }
 
 .task-header>div{
@@ -160,57 +182,16 @@ h3{
     height: 30px;
     border: 0px;
     padding: 0px;
-    background-color: #eeeeee;
+    background-color: rgba(0, 0, 0, 0)
 }
 
 .del-btn-i{
     position: absolute;
     top: -8px;
     left: 0px;
-    color: #cc6651;
+    color: #D9D9D9;
     font-size: 25px;
     text-shadow: 0px 2px 2px rgba(126, 134, 158, 0.25);
-}
-
-.task-container{
-    position: relative;
-    box-sizing: border-box;
-    width: 350px;
-    height: 500px;
-    padding: 10px;
-    margin: 15px;
-    background: #eeeeee;
-    border: 2px solid #dac92a;
-    border-top: 20px solid #dac92a;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 15px;
-}
-
-.task-container label:not(.priorityLabel){
-    position: absolute;
-    left: 30px;
-    top: -3px;
-    padding: 0px 5px 0px 5px;
-    margin: 0px;
-    width: auto;
-    height: auto;
-    z-index: 1;
-    background: #eeeeee;
-    
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    color: #494D55;
-}
-
-@keyframes fadeIn{
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-}
-
-.fade-in {
-    animation: fadeIn 1s;
 }
 
 .task-form{
@@ -223,18 +204,36 @@ h3{
     position: relative;
 }
 
+.task-form label:not(.priorityLabel){
+    position: absolute;
+    left: 25px;
+    top: -15px;
+    padding: 0px 5px 0px 5px;
+    margin: 0px;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0);
+    
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: #D9D9D9;
+}
+
 .task-form input:not(.priority){
     box-sizing: border-box;
     text-align: center;
     width: 280px;
     height: 50px;
-    margin: 10px;
+    margin: 10px 10px 25px 10px;
     padding-left: 10px;
     padding-right: 10px;
-    background: #eeeeee;
-    color: #494D55;
-    border: 1px solid #494D55;
-    border-radius: 10px;
+    background: rgba(0, 0, 0, 0);
+    color: #D9D9D9;
+    border: 2px solid #d9d9d96f;
+    border-radius: 15px;
 }
 
 .priorityFrame{
@@ -243,9 +242,9 @@ h3{
     width: 280px;
     height: 90px;
     padding: 15px;
-    background: #eeeeee;
-    border: 1px solid #494D55;
-    border-radius: 10px;
+    background: rgba(0, 0, 0, 0);
+    border: 2px solid #d9d9d96f;
+    border-radius: 15px;
     display: flex;
     justify-content: center;
 }
@@ -253,18 +252,18 @@ h3{
 .priorityFrame>p{
     position: absolute;
     left: 15px;
-    top: -14px;
+    top: -27px;
     padding: 0px 5px 0px 5px;
     margin: 0px;
     width: auto;
     height: auto;
     z-index: 1;
-    background: #eeeeee;
-    font-family: 'Poppins';
+    background: rgba(0, 0, 0, 0);
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
-    color: #494D55;
+    color: #D9D9D9;
 }
 
 .priorityFrame>div{
@@ -274,28 +273,26 @@ h3{
 }
 
 .priorityFrame label{
-    color: #494D55;
+    color: #D9D9D9;
 }
 
 .priority{
     margin: 5px;
     width: 20px;
     height: 20px;
-    background: #D9D9D9;
-    border: 1px solid #494D55;
-    border-radius: 10px;
+    opacity: 0.7;
 }
 
 /* BUTTONS *//* BUTTONS *//* BUTTONS */
 #btn-panel{
     position: fixed;
-    bottom: 10px;
-    right: 10px;
-    height: 210px;
+    bottom: 20px;
+    right: 20px;
+    height: 300px;
     width: 50px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 #add-div{
@@ -309,7 +306,7 @@ h3{
     height: 50px;
     border: 0px;
     padding: 0px;
-    background-color: #D9D9D9;
+    background-color: rgba(0, 0, 0, 0)
 }
 
 #add-btn-i{
@@ -327,7 +324,7 @@ h3{
     height: 50px;
     border: 0px;
     padding: 0px;
-    background-color: #D9D9D9;
+    background-color: rgba(0, 0, 0, 0)
 }
 
 #save-btn-i{
@@ -346,9 +343,7 @@ h3{
     height: 50px;
     border: 0px;
     padding: 0px;
-    background-color: #D9D9D9;
-
-
+    background-color: rgba(0, 0, 0, 0)
 }
 
 #ok-btn-i{
@@ -360,14 +355,28 @@ h3{
     text-shadow: 0px 2px 2px rgba(126, 134, 158, 0.25);
 }
 
-#gpt-btn{
-    position: fixed;
-    right: 10px;
-    top: 500px;
+#ai-btn{
+    position: relative;
     width: 50px;
     height: 50px;
+    border: 0px;
+    padding: 0px;
+    background-color: rgba(0, 0, 0, 0);
 }
 
-/* .offcanvas{
+#ai-btn-i{
+    position: absolute;
+    top: -14px;
+    left: 0px;
+    color:#0ABAB5;
+    font-size: 50px;
+    text-shadow: 0px 2px 2px rgba(126, 134, 158, 0.25);
 
-} */
+}
+
+.offcanvas{
+    width: 66%!important;
+    background: #0abab4b5;
+    color: #000000;
+    border-radius: 25px 0px 0px 25px;
+}

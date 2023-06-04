@@ -22,26 +22,27 @@
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav col">
               <li class="nav-item col">
-                <a class="nav-link" href="#">Profile</a>
+                <a class="nav-link" href="#"><i class="bi bi-person"></i> Profile</a>
               </li>
               <li class="nav-item col">
-                <a class="nav-link" href="#">Sharing</a>
+                <a class="nav-link" href="#"><i class="bi bi-share"></i> Sharing</a>
               </li>
               <li class="nav-item col">
-                <a class="nav-link" href="#">Calendar</a>
+                <a class="nav-link" href="#"><i class="bi bi-calendar3"></i> Calendar</a>
               </li>
               <li class="nav-item col dropdown">
+                
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Saved Plans
+                  <i class="bi bi-bookmark-star"></i> Saved Plans
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Work</a></li>
-                  <li><a class="dropdown-item" href="#">Weekend</a></li>
-                  <li><a class="dropdown-item" href="#">Tokyo</a></li>
+                  <li><a class="dropdown-item" href="#">Plan1</a></li>
+                  <li><a class="dropdown-item" href="#">Plan2</a></li>
+                  <li><a class="dropdown-item" href="#">Plan3</a></li>
                 </ul>
               </li>
               <li class="nav-item col">
-                <a class="nav-link" href="#">Settings</a>
+                <a class="nav-link" href="#"><i class="bi bi-gear"></i> Settings</a>
               </li>
             </ul>
           </div>
@@ -50,7 +51,7 @@
     <div id="content">
         <!------ PLAN ------><!------ PLAN ------><!------ PLAN ------>
         <div id="plan-container">     
-          <h3>What's Your Plan?</h3>
+          <h3>Tell me your plan.</h3>
           <form action="/forms" id="plan-form">
             <div>
               <label for="planName">Plan Name</label>
@@ -100,11 +101,11 @@
         <div id="task-list">
           <div class="task-container">
             <div class="task-header">
-              <div><h3>Task&nbsp</h3><h3 class="task-count">1</h3><h3>&nbspInput</h3></div>
+              <div><h3>Task&nbsp</h3><h3 class="task-count">1</h3></div>
               <div><button class="del-btn">
-                <i class="bi bi-x-square-fill del-btn-i"></i></button></div>
+                <i class="bi bi-x-square del-btn-i"></i></button></div>
             </div>
-            <form class="task-form">
+            <form action="/forms" class="task-form">
               <div>
                 <label for="taskDescription">Task Description</label>
                 <input type="text" name="taskDescription" id="taskDescription" required/>
@@ -134,19 +135,20 @@
         <div id="btn-panel">
           <div id="add-div">
             <button id="add-btn">
-              <i class="bi bi-plus-square-fill" id="add-btn-i"></i></button></div>
+            <i class="bi bi-plus-square" id="add-btn-i"></i></button></div>
           <div id="save-div">
             <button type="submit" id="save-btn">
-            <i class="bi bi-arrow-up-square-fill" id="save-btn-i"></i></button></div>
-          <div id="ok-div">
+            <i class="bi bi-star" id="save-btn-i"></i></button></div>
+            <button id=ai-btn class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+              <i class="bi bi-chat-right-text" id="ai-btn-i"></i></button>
+            <div id="ok-div">
             <button type="submit" id="ok-btn">
-            <i class="bi bi-check-square-fill" id="ok-btn-i"></i></button></div>
+            <i class="bi bi-check-square" id="ok-btn-i"></i></button></div>
         </div>
-        <button id=gpt-btn class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-          AI</button>
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+
+        <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
           <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+          <h5 class="offcanvas-title" id="offcanvasRightLabel">Your Suggested Itinerary:</h5>
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div class="offcanvas-body">

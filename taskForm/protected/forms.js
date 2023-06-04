@@ -90,16 +90,9 @@ addButton.addEventListener('click', () => {
   newNode.classList.add("fade-in");
   document.querySelector('#task-list').appendChild(newNode)
   newNode.scrollIntoView({ behavior: "smooth"});
-  
+  //DEL-BUTTON IN NEW TASK //DEL-BUTTON IN NEW TASK //DEL-BUTTON IN NEW TASK//
   let newDelBtn = newNode.querySelector(".del-btn");
   newDelBtn.addEventListener('click', () => {
-      // if (Array.prototype.indexOf.call(document.querySelectorAll('.task-container'), newNode.querySelector('.del-btn').parentNode) === 0) {
-      // if (document.querySelectorAll('.task-container').length === 1) {
-      //   console.log(Array.prototype.indexOf.call(document.querySelectorAll('.task-container'), newNode.querySelector('.del-btn').parentNode));
-      // } else {
-        // newNode.querySelector('.del-btn').parentNode.remove();
-
-      // };
     if (document.querySelectorAll('.task-container').length === 1) {
         console.log('Input at least 1 task.');
     } else {
@@ -112,22 +105,6 @@ addButton.addEventListener('click', () => {
     };
   });
 });
-
-
-// document.querySelectorAll('.del-btn').forEach(ele => ele.addEventListener('click', () => {
-//   if (document.querySelectorAll('.task-container').length === 1) {
-//     console.log(Array.prototype.indexOf.call(document.querySelectorAll('.task-container'), ele.parentNode));
-//   } else {
-//     ele.parentNode.remove();
-//   };
-//   let i = 1;
-//   document.querySelectorAll('.task-count').forEach((e) => {
-//     e.innerHTML = i;
-//     i++
-//   });
-
-// }));
-
 
 okButton.addEventListener("click", () => {
     console.log("okButton clicked!");
