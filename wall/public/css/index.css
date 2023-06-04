@@ -4,8 +4,16 @@ body{
     background-color: rgb(132, 42, 3);
 }
 
-#content{
-    margin: 20px;
+.navbar{
+    background-color: grey;
+    opacity: 0.5;
+    position: sticky;
+}
+
+#main-container{
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
     display: flex;
     flex-wrap:wrap;
     justify-content: center;
@@ -18,4 +26,44 @@ body{
     height: 200px;
     margin: 15px;
     box-shadow: 10px 10px 15px rgb(35, 34, 34);
+    position: relative;
+    display: block;
+}
+
+.text{
+    height: 180px;
+    width: 180px;
+    margin: 5px;
+    position: absolute;
+    background-color: rgb(213, 213, 107);
+    border: 0;
+}
+
+.img-btn-icon{ 
+    position: absolute;
+    right: 5px;
+    top: 0px;
+}
+
+/* .img-btn-icon:hover{ 
+    color: aqua;
+    cursor: pointer;
+
+} */
+
+.img-btn{
+    opacity: 0.5;
+    height: 14px;
+    width: 16px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+.submit{
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    left: 5px;
+    bottom: 5px;
 }

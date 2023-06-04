@@ -1,17 +1,28 @@
 import express, {Request, Response, NextFunction} from "express";
 import expressSession from "express-session";
 import path from "path";
-// import formidable from "formidable";
+import jsonfile from "jsonfile";
+import formidable from "formidable";
+import {formParse} from "./utils";
 // import {db} from "db.ts";
+
+const form = formidable({
+  uploadDir: "public/upload",
+  keepExtensions: true,
+  maxFiles: 1,
+  maxFileSize: (1024 ** 2) * 200,
+  filter: (part) => part.mimetype?.startsWith("image/") || false,
+});
 
 const app = express();
 
-app.use(
-    expressSession({
-      secret: "memoWallIsBeingShown",
-      resave: true,
-      saveUninitialized: true,
-    })
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(expressSession({
+          secret: "memoWallIsBeingShown",
+          resave: true,
+          saveUninitialized: true,
+        })
   );
   
 declare module "express-session" {
@@ -27,20 +38,29 @@ app.use((req: Request, res: Response, next: NextFunction) => {
   } else {
     req.session.counter ++; 
   }
-  console.log(`Count ${req.session.counter}`)
   const time = new Date();
-  console.log(`[${time.toLocaleString()}] Requested ${req.path}`);
+  console.log(`[${time.toLocaleString()}] Count ${req.session.counter} Requested ${req.path}`);
   next();
 });
 
-// app.get("/", (req, res, next) => {
-//   console.log(req.path);
-//   next();
-// })
+interface Record {
+  text: string | string[]
+}
+
+app.post("/memo", async (req: Request, res: Response) => {
+  const {fields, files} = await formParse(form, req);
+  console.log(files)
+  const memos: Record[]  = await jsonfile.readFile(path.resolve(__dirname,"memos.json"));
+  memos.push({
+    text: fields.text
+  });
+  await jsonfile.writeFile(path.resolve(__dirname,"memos.json"), memos, {spaces: 4});
+
+  res.redirect("/");
+})
+
 
 app.use(express.static(path.resolve(__dirname, "public")));
-
-
 
 // type Memo = {
 //   content: string;
