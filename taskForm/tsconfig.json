@@ -21,6 +21,7 @@
         "scripts",
         "index.js",
         "public",
+        "protected",
         "forms"
     ]
 }

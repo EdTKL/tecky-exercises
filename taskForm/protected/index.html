@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="forms.css">
+  <link rel="stylesheet" href="nav-bar.css">
+  <title>Planner</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">DROOL Hello Moto?</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav col">
+          <li class="nav-item col">
+            <a class="nav-link" href="#"><i class="bi bi-person"></i> Profile</a>
+          </li>
+          <li class="nav-item col">
+            <a class="nav-link" href="#"><i class="bi bi-share"></i> Sharing</a>
+          </li>
+          <li class="nav-item col" id="create-plan">
+            <a class="nav-link" href="#"><i class="bi bi-calendar3"></i> Create New Plan</a>
+          </li>
+          <li class="nav-item col dropdown">
+
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-bookmark-star"></i> Saved Plans
+            </a>
+            <ul class="dropdown-menu saved-plan-list">
+              <li><a class="dropdown-item" id="f768a91a-51b9-4f1c-b204-cac696676e76" href="#">Plan1</a></li>
+              <li><a class="dropdown-item" id="df81bbe1-00c7-44b5-8735-da31fa03f073" href="#">Plan2</a></li>
+            </ul>
+          </li>
+          <li class="nav-item col">
+            <a class="nav-link" href="#"><i class="fa-solid fa-gear"></i> Settings</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div id="content">
+    <!------ PLAN ------><!------ PLAN ------><!------ PLAN ------>
+    <div id="plan-container">
+      <h3>Tell me your plan.</h3>
+      <form action="/forms" id="plan-form">
+        <div>
+          <label for="planName">Plan Name</label>
+          <input type="text" name="planName" id="planName" required>
+        </div>
+        <div>
+          <label for="planDate">Date</label>
+          <input type="date" name="planDate" id="planDate" required>
+        </div>
+        <div>
+          <label for="startLocation">Starting Location</label>
+          <input type="text" name="startLocation" id="startLocation" />
+        </div>
+        <div>
+          <label for="returnLocation">Return Location</label>
+          <input type="text" name="returnLocation" id="returnLocation">
+        </div>
+        <div>
+          <label for="startTime">Starting Time</label>
+          <input type="time" name="startTime" id="startTime" value="09:00">
+        </div>
+        <div>
+          <label for="endTime">Ending Time</label>
+          <input type="time" name="endTime" id="endTime" value="21:00">
+        </div>
+        <div>
+          <label for="lunchStart">Lunch Starts</label>
+          <input type="time" name="lunchStart" id="lunchStart" value="12:30">
+        </div>
+        <div>
+          <label for="lunchEnd">Lunch Ends</label>
+          <input type="time" name="lunchEnd" id="lunchEnd" value="13:30">
+        </div>
+        <div>
+          <label for="dinnerStart">Dinner Start</label>
+          <input type="time" name="dinnerStart" id="dinnerStart" value="19:30">
+        </div>
+        <div>
+          <label for="dinnerEnd">Dinner Ends</label>
+          <input type="time" name="dinnerEnd" id="dinnerEnd" value="20:30">
+        </div>
+        <div id="travelFrame">
+          <p id="travelMethod">Travel Method</p>
+          <div>
+            <label class="frameLabels" for="pubTrans">Public Transport</label>
+            <input type="checkbox" name="pubTrans" class="travelBoxes" id="pubTrans">
+          </div>
+          <div>
+            <label class="frameLabels" for="walk">Walking</label>
+            <input type="checkbox" name="walk" class="travelBoxes" id="walk">
+          </div>
+          <div>
+            <label class="frameLabels" for="drive">Driving</label>
+            <input type="checkbox" name="drive" class="travelBoxes" id="drive">
+          </div>
+        </div>
+      </form>
+    </div>
+    <!------ TASK ------><!------ TASK ------><!------ TASK ------>
+    <div id="task-list">
+      <div class="task-container">
+        <div class="task-header">
+          <div>
+            <h3>Task&nbsp</h3>
+            <h3 class="task-count">1</h3>
+          </div>
+          <div><button class="del-btn">
+              <i class="bi bi-x-square del-btn-i"></i></button></div>
+        </div>
+        <form action="/forms" class="task-form">
+          <div>
+            <label for="taskDescription">Task Description</label>
+            <input type="text" name="taskDescription" class="taskDescription" required />
+          </div>
+          <div>
+            <label for="taskDuration">Task Duration</label>
+            <input type="number" min="0" name="taskDuration" class="taskDuration" value="1" required />
+          </div>
+          <div>
+            <label for="taskLocation">Location</label>
+            <input type="text" name="taskLocation" class="taskLocation" required>
+          </div>
+          <div>
+            <label for="remarks">Remarks</label>
+            <input type="text" name="remarks" class="remarks">
+          </div>
+          <div class="priorityFrame">
+            <p class="priorityFrameTxt">Priority</p>
+            <div>
+              <label class="priorityLabel" for="priority">Must be done?</label>
+              <input type="checkbox" name="priority" class="priority">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div id="btn-panel">
+      <div id="add-div">
+        <button id="add-btn">
+          <i class="bi bi-plus-square" id="add-btn-i"></i></button>
+      </div>
+      <div id="save-div">
+        <button type="submit" id="save-btn">
+          <i class="bi bi-star" id="save-btn-i"></i></button>
+      </div>
+      <button id=ai-btn class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+        <i class="bi bi-chat-right-text" id="ai-btn-i"></i></button>
+      <div id="ok-div">
+        <button type="submit" id="ok-btn">
+          <i class="bi bi-check-square" id="ok-btn-i"></i></button>
+      </div>
+    </div>
+
+    <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasRight"
+      aria-labelledby="offcanvasRightLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasRightLabel">Your Suggested Itinerary:</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        ...
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+  <script src="hmac.js"></script>
+  <script src="plan.js"></script>
+  <script src="forms.js"></script>
+</body>
+
+</html>

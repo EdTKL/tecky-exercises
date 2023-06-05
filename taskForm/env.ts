@@ -9,6 +9,8 @@ export const env_config = {
     POSTGRES_USER:"",
     POSTGRES_PASSWORD:"",
     POSTGRES_PORT:"",
+    CHAT_GPT_TOKEN:"",
+    CHAT_GPT_BASE_PATH:""
 }
 
 populateEnv(env_config,{mode:'halt'});
