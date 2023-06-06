@@ -1,0 +1,215 @@
+/* SIDEBAR *//* SIDEBAR *//* SIDEBAR */
+.del-saved-btn{
+    position: relative;
+    width: 15px;
+    height: 15px;
+    border: 0px;
+    padding: 0px;
+    background-color: rgba(0, 0, 0, 0)
+}
+
+.del-saved-btn-i{
+    color: #d9d9d96f;
+    position: absolute;
+    top: -6px;
+    left: -2px;
+    font-size: 15px;
+}
+
+.del-saved-btn:hover .del-saved-btn-i{
+    font-size: 18px;
+    top: -8px;
+    left: -3px;
+    text-shadow: 0 0 20px #fff;
+}
+
+
+/* TASKS *//* TASKS *//* TASKS */
+.del-btn{
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border: 0px;
+    padding: 0px;
+    background-color: rgba(0, 0, 0, 0)
+}
+
+.del-btn-i{
+    position: absolute;
+    top: -8px;
+    left: 0px;
+    color: #d9d9d96f;
+    font-size: 25px;
+    text-shadow: 0px 2px 2px rgba(126, 134, 158, 0.25);
+}
+
+.del-btn:hover .del-btn-i{
+    font-size: 30px;
+    top: -11px;
+    left: -2px;
+    text-shadow: 0 0 20px #fff;
+}
+
+
+/* BUTTON-PANEL *//* BUTTON-PANEL *//* BUTTON-PANEL */
+#btn-panel{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    height: 320px;
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.tips{
+    position: absolute;
+    right: 130%;
+    transform: translateY(-50%);
+    z-index: 1;
+    width: 80px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.33);
+    color: #fff;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    
+    font-family: 'Geologica', sans-serif;
+}
+
+#add-btn{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border: 0px;
+    padding: 0px;
+    background-color: rgba(0, 0, 0, 0)
+}
+
+#add-btn-i{
+    position: absolute;
+    top: -14px;
+    left: 0px;
+    color:#dac92a;
+    font-size: 50px;
+    text-shadow: 0px 2px 2px rgba(126, 134, 158, 0.25);
+}
+
+#add-tip{
+    visibility: hidden;
+    width: 105px;
+    height: 50px;
+}
+
+#add-btn:hover #add-btn-i{
+    font-size: 60px;
+    top: -24px;
+    left: -5px;
+    text-shadow: 0 0 20px #fff;
+}
+
+#add-btn:hover #add-tip{
+    visibility: visible;
+}
+
+#save-btn{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border: 0px;
+    padding: 0px;
+    background-color: rgba(0, 0, 0, 0)
+}
+
+#save-btn-i{
+    position: absolute;
+    top: -14px;
+    left: 0px;
+    color: #689e6a;
+    font-size: 50px;
+    text-shadow: 0px 2px 2px rgba(126, 134, 158, 0.25);
+}
+
+#save-tip{
+    visibility: hidden;
+}
+
+#save-btn:hover #save-btn-i{
+    font-size: 60px;
+    top: -24px;
+    left: -5px;
+    text-shadow: 0 0 20px #fff;
+}
+
+#save-btn:hover #save-tip{
+    visibility: visible;
+}
+
+#gpt-btn{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border: 0px;
+    padding: 0px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#gpt-btn-i{
+    position: absolute;
+    top: -14px;
+    left: 0px;
+    color:#0ABAB5;
+    font-size: 50px;
+    text-shadow: 0px 2px 2px rgba(126, 134, 158, 0.25);
+}
+
+#gpt-tip{
+    visibility: hidden;
+}
+
+#gpt-btn:hover #gpt-btn-i{
+    font-size: 60px;
+    top: -24px;
+    left: -5px;
+    text-shadow: 0 0 20px #fff;
+}
+
+#gpt-btn:hover #gpt-tip{
+    visibility: visible;
+}
+
+#ok-btn{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border: 0px;
+    padding: 0px;
+    background-color: rgba(0, 0, 0, 0)
+}
+
+#ok-btn-i{
+    position: absolute;
+    top: -14px;
+    left: 0px;
+    color:#097bb4;
+    font-size: 50px;
+    text-shadow: 0px 2px 2px rgba(126, 134, 158, 0.25);
+}
+
+#ok-tip{
+    visibility: hidden;
+}
+
+#ok-btn:hover #ok-btn-i{
+    font-size: 60px;
+    top: -24px;
+    left: -5px;
+    text-shadow: 0 0 20px #fff;
+}
+
+#ok-btn:hover #ok-tip{
+    visibility: visible;
+}

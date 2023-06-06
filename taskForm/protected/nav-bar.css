@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Geologica:wght@200&display=swap');
 
 .navbar{
-    background: rgba(0, 0, 0, 0.3)!important;
+    background: rgba(0, 0, 0, 0)!important;
     padding-bottom: 0px;
 }
 
@@ -18,8 +18,14 @@
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.navbar-brand:hover{
-    color:rgba(255, 255, 255, 1);
+#navbar-brand{
+    margin: 0px;
+}
+
+#logo{
+    opacity: 0.8;
+    margin-left: 30px;
+    margin-right: 0px;
 }
 
 .nav-link:hover{
@@ -54,28 +60,27 @@
     position: static!important;
 }
 
-.dropdown-item{
-    color: #D9D9D9!important;
-}
-
-.dropdown-item:hover{
-    background: #d9d9d96f;
-}
-
-/* .saved-plan-list>li{
+.bookmarked>li{
     display: flex;
     justify-content: space-between;
-    align-items: end;
+    align-items: center;
     padding-left: 7px;
     padding-right: 7px;
 }
 
-.saved-plan-list a{
+.bookmarked a{
+    color: #D9D9D9!important;
     width: 100%;
     height: 100%;
+    margin-right: 5px;
 }
 
-.saved-plan-list button{
+.bookmarked a:hover{
+    background: rgba(217, 217, 217, 0.3);
+    border-radius: 10px;
+}
+
+.bookmarked button{
     position: relative;
     width: 18px;
     height: 18px;
@@ -84,12 +89,14 @@
     background-color: rgba(0, 0, 0, 0)
 }
 
-.saved-plan-list i{
-    position: relative; 
+.bookmarked i{
+    position: absolute;
+    top: -4px;
+    left: -1px; 
     color: #D9D9D9;
     font-size: 18px;
     text-shadow: 0px 2px 2px rgba(126, 134, 158, 0.25);
-} */
+}
 
 .navbar-toggler{
     color: #D9D9D9;

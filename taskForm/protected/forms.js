@@ -1,14 +1,9 @@
-
-
 const plan = document.querySelector("#plan-form");
-
 const btnPanel = document.querySelector("#btn-panel");
 const addButton = document.querySelector("#add-btn");
 const okButton = document.querySelector("#ok-btn");
 const delButton = document.querySelector(".del-btn");
 const saveButton = document.querySelector("#save-btn");
-
-
 
 //PLAN FORM INPUT//PLAN FORM INPUT//PLAN FORM INPUT
 plan.addEventListener("submit", async function (event) {
