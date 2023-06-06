@@ -3,22 +3,115 @@ body{
 }
 
 #content{
-    height: 100vh-42px;
+    height: calc(100vh-42px);
     width:auto;
-    padding: 20px;
+    padding: 10px;
     /* background: linear-gradient(140deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 60%, rgba(94,25,9,1) 65%, rgba(92,64,7,1) 70%, rgba(84,82,6,1) 75%, rgba(33,79,6,1) 80%, rgba(7,63,83,1) 85%, rgba(18,22,74,1) 90%, rgba(56,16,74,1) 95%); */
     background: linear-gradient(140deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 60%, rgba(94,25,9,1) 65%, rgba(92,64,7,1) 70%, rgba(84,82,6,1) 75%, rgba(33,79,6,1) 80%, rgba(7,63,83,1) 85%, rgba(18,22,74,1) 90%, rgba(56,16,74,1) 95%);
     /* background: linear-gradient(140deg, rgba(0,0,0,1) 0%, rgba(94,25,9,1) 12.5%, rgba(92,64,7,1) 25%, rgba(84,82,6,1) 37.5%, rgba(33,79,6,1) 50%, rgba(7,63,83,1) 62.5%, rgba(18,22,74,1) 75%, rgba(56,16,74,1) 87.5%); */
     border-radius: 25px 25px 0px 0px;
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; */
+}
+
+#saved-container{
+    box-sizing: border-box;
+    height: 99%;
+    padding: 30px 5px 5px 5px;
+    margin-top: 15px;
+    background:rgba(0, 236, 0, 0.137);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius:25px;
+    text-align: center;
+}
+
+#saved-container>form{
+    text-align: center;
+}
+
+#saved-container label{
+    width: auto;
+    height: auto;
+    margin: 0px 0px 0px 0px;
+    font-family: 'Geologica', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    align-items: center;
+    color: #D9D9D9;
+}
+
+#saved-container input{
+    box-sizing: border-box;
+    margin: 5px 0px 10px 0px;
+    width: 90%;
+    height: 50px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0);
+    border: 2px solid #d9d9d96f;
+    border-radius: 15px;
+    color: #D9D9D9;
+}
+
+
+#saved-plan-list{
+    display: block;
+    padding: 2px;
+}
+
+#saved-plan-list>li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    border-radius: 15px;
+}
+
+#saved-plan-list>li:hover{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+li>p{
+    width: 85%;
+    word-wrap: break-word;
+    font-family: 'Geologica', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: #D9D9D9;
+    padding: 5px;
+    margin: 0px;
+}
+
+li>p:hover{
+    color: rgba(255, 255, 255, 1);
+}
+
+.del-saved-btn{
+    position: relative;
+    width: 15px;
+    height: 15px;
+    border: 0px;
+    padding: 0px;
+    background-color: rgba(0, 0, 0, 0)
+}
+
+.del-saved-btn-i{
+    color: #D9D9D9;
+    position: absolute;
+    left: -2px;
+    top: -6px;
+    font-size: 15px;
+
 }
 
 /* PLAN *//* PLAN *//* PLAN */
 #plan-container{
     box-sizing: border-box;
-    width: auto;
-    height: auto;
     padding: 5px 5px 15px 5px;
-    margin: 15px;
+    margin-top: 15px;
     background:#2956c02e;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius:25px;
@@ -138,10 +231,11 @@ h3{
 .task-container{
     position: relative;
     box-sizing: border-box;
-    width: 330px;
+    width: 300px;
     height: 540px;
     padding: 5px;
-    margin: 15px;
+    margin-top: 10px;
+    margin-right: 10px;
     background: #fbeb0d4f;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 25px;
@@ -179,7 +273,7 @@ h3{
 .del-btn{
     position: relative;
     width: 25px;
-    height: 30px;
+    height: 25px;
     border: 0px;
     padding: 0px;
     background-color: rgba(0, 0, 0, 0)
@@ -189,7 +283,7 @@ h3{
     position: absolute;
     top: -8px;
     left: 0px;
-    color: #D9D9D9;
+    color: #d9d9d96f;
     font-size: 25px;
     text-shadow: 0px 2px 2px rgba(126, 134, 158, 0.25);
 }
@@ -225,7 +319,7 @@ h3{
 .task-form input:not(.priority){
     box-sizing: border-box;
     text-align: center;
-    width: 280px;
+    width: 260px;
     height: 50px;
     margin: 10px 10px 25px 10px;
     padding-left: 10px;
@@ -239,7 +333,7 @@ h3{
 .priorityFrame{
     margin: 10px;
     box-sizing: border-box;
-    width: 280px;
+    width: 260px;
     height: 90px;
     padding: 15px;
     background: rgba(0, 0, 0, 0);
@@ -295,6 +389,21 @@ h3{
     justify-content: space-evenly;
 }
 
+.tips{
+    width: 80px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.33);
+    color: #fff;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    position: absolute;
+    right: 110%;
+    z-index: 1;
+    font-family: 'Geologica', sans-serif;
+}
+
 #add-div{
     display: flex;
     align-items: center;
@@ -318,6 +427,12 @@ h3{
     text-shadow: 0px 2px 2px rgba(126, 134, 158, 0.25);
 }
 
+#add-tip{
+    visibility: visible;
+    width: 105px;
+    height: 50px;
+}
+
 #save-btn{
     position: relative;
     width: 50px;
@@ -334,6 +449,15 @@ h3{
     color: #689e6a;
     font-size: 50px;
     text-shadow: 0px 2px 2px rgba(126, 134, 158, 0.25);
+}
+
+#save-tip{
+    visibility: hidden;
+    /* visibility: visible; */
+}
+
+#save-btn:hover #save-tip{
+    visibility: visible;
 }
 
 #ok-btn{
@@ -354,7 +478,15 @@ h3{
     text-shadow: 0px 2px 2px rgba(126, 134, 158, 0.25);
 }
 
-#ai-btn{
+#ok-tip{
+    visibility: hidden;
+}
+
+/* #ok-btn:hover #ok-tip{
+    visibility: visible;
+} */
+
+#gpt-btn{
     position: relative;
     width: 50px;
     height: 50px;
@@ -363,7 +495,7 @@ h3{
     background-color: rgba(0, 0, 0, 0);
 }
 
-#ai-btn-i{
+#gpt-btn-i{
     position: absolute;
     top: -14px;
     left: 0px;
@@ -373,9 +505,24 @@ h3{
 
 }
 
+#gpt-tip{
+    /* visibility: hidden; */
+    width: 80px;
+
+}
+
+/* #gpt-btn:hover #gpt-tip{
+    visibility: visible;
+} */
+
 .offcanvas{
     width: 66%!important;
+    padding: 10px;
     background: #0abab4b5;
-    color: #000000;
     border-radius: 25px 0px 0px 25px;
+    font-family: 'Geologica', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    color: #D9D9D9;
 }

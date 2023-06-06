@@ -36,13 +36,15 @@
             <a class="nav-link" href="#"><i class="bi bi-calendar3"></i> Create New Plan</a>
           </li>
           <li class="nav-item col dropdown">
-
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               <i class="bi bi-bookmark-star"></i> Saved Plans
             </a>
             <ul class="dropdown-menu saved-plan-list">
-              <li><a class="dropdown-item" id="f768a91a-51b9-4f1c-b204-cac696676e76" href="#">Plan1</a></li>
-              <li><a class="dropdown-item" id="df81bbe1-00c7-44b5-8735-da31fa03f073" href="#">Plan2</a></li>
+              <li><a class="dropdown-item" id="f768a91a-51b9-4f1c-b204-cac696676e76" href="#">Plan1</a>
+                <div><button class="del-saved-btn"><i class="bi bi-x-square del-btn-i"></i></button></div> 
+              </li>
+              <li><a class="dropdown-item" id="df81bbe1-00c7-44b5-8735-da31fa03f073" href="#">Plan2</a>
+                <div><button class="del-saved-btn"><i class="bi bi-x-square del-btn-i"></i></button></div></li>
             </ul>
           </li>
           <li class="nav-item col">
@@ -52,121 +54,157 @@
       </div>
     </div>
   </nav>
-  <div id="content">
-    <!------ PLAN ------><!------ PLAN ------><!------ PLAN ------>
-    <div id="plan-container">
-      <h3>Tell me your plan.</h3>
-      <form action="/forms" id="plan-form">
-        <div>
-          <label for="planName">Plan Name</label>
-          <input type="text" name="planName" id="planName" required>
-        </div>
-        <div>
-          <label for="planDate">Date</label>
-          <input type="date" name="planDate" id="planDate" required>
-        </div>
-        <div>
-          <label for="startLocation">Starting Location</label>
-          <input type="text" name="startLocation" id="startLocation" />
-        </div>
-        <div>
-          <label for="returnLocation">Return Location</label>
-          <input type="text" name="returnLocation" id="returnLocation">
-        </div>
-        <div>
-          <label for="startTime">Starting Time</label>
-          <input type="time" name="startTime" id="startTime" value="09:00">
-        </div>
-        <div>
-          <label for="endTime">Ending Time</label>
-          <input type="time" name="endTime" id="endTime" value="21:00">
-        </div>
-        <div>
-          <label for="lunchStart">Lunch Starts</label>
-          <input type="time" name="lunchStart" id="lunchStart" value="12:30">
-        </div>
-        <div>
-          <label for="lunchEnd">Lunch Ends</label>
-          <input type="time" name="lunchEnd" id="lunchEnd" value="13:30">
-        </div>
-        <div>
-          <label for="dinnerStart">Dinner Start</label>
-          <input type="time" name="dinnerStart" id="dinnerStart" value="19:30">
-        </div>
-        <div>
-          <label for="dinnerEnd">Dinner Ends</label>
-          <input type="time" name="dinnerEnd" id="dinnerEnd" value="20:30">
-        </div>
-        <div id="travelFrame">
-          <p id="travelMethod">Travel Method</p>
-          <div>
-            <label class="frameLabels" for="pubTrans">Public Transport</label>
-            <input type="checkbox" name="pubTrans" class="travelBoxes" id="pubTrans">
-          </div>
-          <div>
-            <label class="frameLabels" for="walk">Walking</label>
-            <input type="checkbox" name="walk" class="travelBoxes" id="walk">
-          </div>
-          <div>
-            <label class="frameLabels" for="drive">Driving</label>
-            <input type="checkbox" name="drive" class="travelBoxes" id="drive">
+  
+  <div class="container-fluid" id="content">
+    <div class="row">
+      <div class="col-md-2">
+        <div id="saved-container">
+          <form>
+            <label for="search">Search your saved plan</label>
+            <input type="text" name="search" id="search">
+          </form>
+          <div id="saved-plan-list">
+            <li>
+              <p class="saved-plans" id="f768a91a-51b9-4f1c-b204-cac696676e76" href="#" style="word-wrap: break-word;">
+              wahhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</p>
+              <button class="del-saved-btn"><i class="bi bi-x-square del-saved-btn-i"></i></button>
+            </li>
+            <li>
+              <p class="saved-plans" id="df81bbe1-00c7-44b5-8735-da31fa03f073" href="#">Plan2</p>
+              <button class="del-saved-btn"><i class="bi bi-x-square del-saved-btn-i"></i></button>
+            </li>
           </div>
         </div>
-      </form>
-    </div>
-    <!------ TASK ------><!------ TASK ------><!------ TASK ------>
-    <div id="task-list">
-      <div class="task-container">
-        <div class="task-header">
-          <div>
-            <h3>Task&nbsp</h3>
-            <h3 class="task-count">1</h3>
-          </div>
-          <div><button class="del-btn">
-              <i class="bi bi-x-square del-btn-i"></i></button></div>
-        </div>
-        <form action="/forms" class="task-form">
-          <div>
-            <label for="taskDescription">Task Description</label>
-            <input type="text" name="taskDescription" class="taskDescription" required />
-          </div>
-          <div>
-            <label for="taskDuration">Task Duration</label>
-            <input type="number" min="0" name="taskDuration" class="taskDuration" value="1" required />
-          </div>
-          <div>
-            <label for="taskLocation">Location</label>
-            <input type="text" name="taskLocation" class="taskLocation" required>
-          </div>
-          <div>
-            <label for="remarks">Remarks</label>
-            <input type="text" name="remarks" class="remarks">
-          </div>
-          <div class="priorityFrame">
-            <p class="priorityFrameTxt">Priority</p>
+      </div>
+      <!------ PLAN ------><!------ PLAN ------><!------ PLAN ------>
+      <div class="col-md-10">
+        <div id="plan-container">
+          <h3>Tell me your plan.</h3>
+          <form action="/forms" id="plan-form">
             <div>
-              <label class="priorityLabel" for="priority">Must be done?</label>
-              <input type="checkbox" name="priority" class="priority">
+              <label for="planName">Plan Name</label>
+              <input type="text" name="planName" id="planName" required>
             </div>
+            <div>
+              <label for="planDate">Date</label>
+              <input type="date" name="planDate" id="planDate" required>
+            </div>
+            <div>
+              <label for="startLocation">Starting Location</label>
+              <input type="text" name="startLocation" id="startLocation" />
+            </div>
+            <div>
+              <label for="returnLocation">Return Location</label>
+              <input type="text" name="returnLocation" id="returnLocation">
+            </div>
+            <div>
+              <label for="startTime">Starting Time</label>
+              <input type="time" name="startTime" id="startTime" value="09:00">
+            </div>
+            <div>
+              <label for="endTime">Ending Time</label>
+              <input type="time" name="endTime" id="endTime" value="21:00">
+            </div>
+            <div>
+              <label for="lunchStart">Lunch Starts</label>
+              <input type="time" name="lunchStart" id="lunchStart" value="12:30">
+            </div>
+            <div>
+              <label for="lunchEnd">Lunch Ends</label>
+              <input type="time" name="lunchEnd" id="lunchEnd" value="13:30">
+            </div>
+            <div>
+              <label for="dinnerStart">Dinner Start</label>
+              <input type="time" name="dinnerStart" id="dinnerStart" value="19:30">
+            </div>
+            <div>
+              <label for="dinnerEnd">Dinner Ends</label>
+              <input type="time" name="dinnerEnd" id="dinnerEnd" value="20:30">
+            </div>
+            <div id="travelFrame">
+              <p id="travelMethod">Travel Method</p>
+              <div>
+                <label class="frameLabels" for="pubTrans">Public Transport</label>
+                <input type="checkbox" name="pubTrans" class="travelBoxes" id="pubTrans">
+              </div>
+              <div>
+                <label class="frameLabels" for="walk">Walking</label>
+                <input type="checkbox" name="walk" class="travelBoxes" id="walk">
+              </div>
+              <div>
+                <label class="frameLabels" for="drive">Driving</label>
+                <input type="checkbox" name="drive" class="travelBoxes" id="drive">
+              </div>
+            </div>
+          </form>
+        </div>
+            <!------ TASK ------><!------ TASK ------><!------ TASK ------>
+        <div id="task-list">
+          <div class="task-container">
+            <div class="task-header">
+              <div>
+                <h3>Task&nbsp</h3>
+                <h3 class="task-count">1</h3>
+              </div>
+              <div><button class="del-btn">
+                  <i class="bi bi-x-square del-btn-i"></i></button></div>
+            </div>
+            <form action="/forms" class="task-form">
+              <div>
+                <label for="taskDescription">Task Description</label>
+                <input type="text" name="taskDescription" class="taskDescription" required />
+              </div>
+              <div>
+                <label for="taskDuration">Task Duration</label>
+                <input type="number" min="0" name="taskDuration" class="taskDuration" value="1" required />
+              </div>
+              <div>
+                <label for="taskLocation">Location</label>
+                <input type="text" name="taskLocation" class="taskLocation" required>
+              </div>
+              <div>
+                <label for="remarks">Remarks</label>
+                <input type="text" name="remarks" class="remarks">
+              </div>
+              <div class="priorityFrame">
+                <p class="priorityFrameTxt">Priority</p>
+                <div>
+                  <label class="priorityLabel" for="priority">Must be done?</label>
+                  <input type="checkbox" name="priority" class="priority">
+                </div>
+              </div>
+            </form>
           </div>
-        </form>
+        </div>
       </div>
     </div>
+  </div>
+
+
+    <!------ BUTTONS ------><!------ BUTTONS ------><!------ BUTTONS ------>
     <div id="btn-panel">
       <div id="add-div">
         <button id="add-btn">
           <i class="bi bi-plus-square" id="add-btn-i"></i></button>
+        <span class="tips" id="add-tip">Add a Task</span>
       </div>
       <div id="save-div">
         <button type="submit" id="save-btn">
-          <i class="bi bi-star" id="save-btn-i"></i></button>
+          <i class="bi bi-star" id="save-btn-i"></i>
+          <span class="tips" id="save-tip">Save</span>
+        </button>
+        
       </div>
-      <button id=ai-btn class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
-        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-        <i class="bi bi-chat-right-text" id="ai-btn-i"></i></button>
+      <div id="gpt-div">
+        <button id=gpt-btn class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+          <i class="bi bi-chat-right-text" id="gpt-btn-i"></i></button>
+        <span class="tips" id="gpt-tip">Result</span>
+      </div>
       <div id="ok-div">
         <button type="submit" id="ok-btn">
           <i class="bi bi-check-square" id="ok-btn-i"></i></button>
+        <span class="tips" id="ok-tip">Submit</span>
       </div>
     </div>
 
