@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;700;900&display=swap');
+
+#content{
+    position: relative;
+    display: block;
+    top: 40vh;
+    width: auto;
+}
+
+img{
+    animation: fadeInUp;
+    animation-duration: 2s;
+}
+
+h1{
+    width: auto;
+    font-family: 'Geologica', sans-serif;
+    font-weight: 900;
+    font-size: 50px;
+    text-align: center;
+    color: #D9D9D9;
+    animation: fadeInUp;
+    animation-duration: 1s;
+}
+
+h2{
+    width: auto;
+    font-family: 'Geologica', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    color: #D9D9D9;
+    animation: fadeInUp;
+    animation-duration: 1s;
+}
+
+h3{
+    width: auto;
+    font-family: 'Geologica', sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    text-align: center;
+    color: #D9D9D9;
+    animation: fadeInUp;
+    animation-duration: 1s;
+}
+
+#try-btn{
+    position: relative;
+    float: initial;
+    top: 40vh;
+    width: 150px!important;
+    height: 50px;
+    margin: 10px;
+    font-family: 'Geologica', sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    text-align: center;
+    color: #D9D9D9;
+    background: linear-gradient(140deg, rgba(26,26,26,1) 0%, rgba(52,52,52,1) 65%, rgba(217, 217, 217, 0.435) 100%)!important;
+    border-radius: 15px;
+    border: 0px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#try-btn:hover{
+    box-shadow: 0 0 20px #fff!important;
+    cursor: pointer;
+}
+
+
+
+#about{
+    position: relative;
+    top: 40vh;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#people{
+    padding-bottom: 100px;
+}
+
+
+

@@ -1,13 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;700;900&display=swap');
+
 body{
-    background: linear-gradient(90deg, rgb(15, 0, 0) 0%, rgba(94,25,9,1) 12.5%, rgba(92,64,7,1) 25%, rgba(84,82,6,1) 37.5%, rgba(33,79,6,1) 50%, rgba(7,63,83,1) 62.5%, rgba(18,22,74,1) 75%, rgba(56,16,74,1) 87.5%, rgb(10, 0, 15) 100%);
+    background: linear-gradient(90deg, rgb(15, 15, 15) 0%, rgba(94,25,9,1) 12.5%, rgba(92,64,7,1) 25%, rgba(84,82,6,1) 37.5%, rgba(33,79,6,1) 50%, rgba(7,63,83,1) 62.5%, rgba(18,22,74,1) 75%, rgba(56,16,74,1) 87.5%, rgb(10, 0, 15) 100%);
 }
 
 #content{
-    height: auto;
+    height: fit-content;
+    min-height: calc(100vh - 50px);
     width:auto;
     padding: 10px;
     /* background: linear-gradient(140deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 60%, rgba(94,25,9,1) 65%, rgba(92,64,7,1) 70%, rgba(84,82,6,1) 75%, rgba(33,79,6,1) 80%, rgba(7,63,83,1) 85%, rgba(18,22,74,1) 90%, rgba(56,16,74,1) 95%); */
-    background: linear-gradient(140deg, rgba(0,0,0,1) 0%, rgba(20,20,20,1) 60%, rgba(94,25,9,1) 65%, rgba(92,64,7,1) 70%, rgba(84,82,6,1) 75%, rgba(33,79,6,1) 80%, rgba(7,63,83,1) 85%, rgba(18,22,74,1) 90%, rgba(56,16,74,1) 95%);
+    background: linear-gradient(140deg, rgba(0,0,0,1) 0%, rgba(26,26,26,1) 60%, rgba(94,25,9,1) 65%, rgba(92,64,7,1) 70%, rgba(84,82,6,1) 75%, rgba(33,79,6,1) 80%, rgba(7,63,83,1) 85%, rgba(18,22,74,1) 90%, rgba(56,16,74,1) 95%);
+    /* background: linear-gradient(140deg, rgba(0,0,0,1) 0%, rgba(52,52,52,1) 60%, rgba(94,25,9,1) 79%, rgba(92,64,7,1) 82%, rgba(84,82,6,1) 85%, rgba(33,79,6,1) 88%, rgba(7,63,83,1) 91%, rgba(18,22,74,1) 94%, rgba(56,16,74,1) 97%); */
+
     /* background: linear-gradient(140deg, rgba(0,0,0,1) 0%, rgba(94,25,9,1) 12.5%, rgba(92,64,7,1) 25%, rgba(84,82,6,1) 37.5%, rgba(33,79,6,1) 50%, rgba(7,63,83,1) 62.5%, rgba(18,22,74,1) 75%, rgba(56,16,74,1) 87.5%); */
     border-radius: 25px 25px 0px 0px;
     /* display: flex;
@@ -21,7 +27,10 @@ body{
     height: 99%;
     padding: 30px 5px 5px 5px;
     margin-top: 15px;
-    background:rgba(102, 255, 0, 0.146);
+    margin-bottom: 10px;
+    /* background:rgba(102, 255, 0, 0.146); */
+    background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(100,100,100,0.3) 100%);
+    border: 4px solid rgba(104, 158, 106, 0.7);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius:25px;
     text-align: center;
@@ -37,7 +46,7 @@ body{
     margin: 0px 0px 0px 0px;
     font-family: 'Geologica', sans-serif;
     font-style: normal;
-    font-weight: bold1;
+    font-weight: 500;
     font-size: 16px;
     text-align: center;
     align-items: center;
@@ -46,7 +55,7 @@ body{
 
 #saved-container input{
     box-sizing: border-box;
-    margin: 5px 0px 10px 0px;
+    margin: 1px 0px 15px 0px;
     width: 90%;
     height: 50px;
     text-align: center;
@@ -74,8 +83,8 @@ li>p{
     word-wrap: break-word;
     font-family: 'Geologica', sans-serif;
     font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
+    font-weight: 300;
+    font-size: 14px;
     color: #D9D9D9;
     padding: 5px;
     margin: 0px;
@@ -93,9 +102,18 @@ li>p:hover{
     box-sizing: border-box;
     padding: 5px 5px 15px 5px;
     margin-top: 15px;
-    background:#2956c02e;
+    /* background:#2956c02e; */
+    background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(100,100,100,0.3) 100%);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: 4px solid rgba(9, 123, 180, 0.7);
     border-radius:25px;
+}
+
+#plan-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 20px 20px 20px;
 }
 
 h3{
@@ -104,7 +122,7 @@ h3{
     margin: 0px 0px 0px 0px;
     font-family: 'Geologica', sans-serif;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 22px;
     display: flex;
     align-items: center;
@@ -137,7 +155,22 @@ h3{
     border: 2px solid #d9d9d96f;
     border-radius: 15px;
     color: #D9D9D9;
+    font-family: 'Geologica', sans-serif;
+    font-style: normal;
+    font-weight: 300;
 }
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(99%) sepia(0%) saturate(638%) hue-rotate(177deg) brightness(87%) contrast(95%);
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+    filter: invert(99%) sepia(0%) saturate(638%) hue-rotate(177deg) brightness(87%) contrast(95%);
+}
+
+input[type=checkbox] {
+    accent-color: #097bb4;
+  }
 
 #plan-form label:not(.frameLabels){
     position: absolute;
@@ -151,7 +184,7 @@ h3{
 
     font-family: 'Geologica', sans-serif;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 500;
     font-size: 16px;
     color: #D9D9D9;
 }
@@ -180,7 +213,7 @@ h3{
     z-index: 1;
     font-family: 'Geologica', sans-serif;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 500;
     font-size: 16px;
     color: #D9D9D9;
 }
@@ -193,6 +226,9 @@ h3{
 
 .frameLabels{
     color: #D9D9D9;
+    font-family: 'Geologica', sans-serif;
+    font-style: normal;
+    font-weight: 300;
 }
 
 .travelBoxes{
@@ -217,7 +253,9 @@ h3{
     padding: 5px;
     margin-top: 10px;
     margin-right: 10px;
-    background: #fbeb0d4f;
+    /* background: #fbeb0d4f; */
+    background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(100,100,100,0.3) 100%);
+    border: 4px solid rgba(218, 201, 42, 0.7);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 25px;
 }
@@ -231,20 +269,20 @@ h3{
     animation: fadeIn 1s;
 }
 
-/* @keyframes fadeOut{
+@keyframes fadeOut{
     0% {opacity: 1;}
     100% {opacity: 0;}
 }
 
 .fade-out {
-    animation: fadeOut 1s;
-} */
+    animation: fadeOut 0.5s;
+}
 
 .task-header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0px 20px 15px 30px;
+    margin: 0px 20px 20px 20px;
 }
 
 .task-header>div{
@@ -275,7 +313,7 @@ h3{
     
     font-family: 'Geologica', sans-serif;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 300;
     font-size: 16px;
     color: #D9D9D9;
 }
@@ -348,7 +386,13 @@ h3{
     border-radius: 25px 0px 0px 25px;
     font-family: 'Geologica', sans-serif;
     font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
+    font-weight: 300;
+    font-size: 22px;
     color: #D9D9D9;
+}
+
+.offcanvas-header{
+    display: flex;
+    justify-content: space-between!important;
+    align-items: center!important;
 }

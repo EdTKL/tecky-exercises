@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;700;900&display=swap');
+
+@keyframes fadeIn {
+    0% {opacity: 0 }
+
+    100% {opacity: 1;}
+}
+
+.fade-in {
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+    }
+
+    0% {
+        opacity: 1;
+    }
+}
+
+.fade-out {
+    animation: fadeOut 1s;
+}
+
+#login-window {
+    position: fixed;
+    top: 25vh;
+    left: 20vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background: linear-gradient(140deg, rgba(0, 0, 0, 0.98) 0%, rgba(26, 26, 26, 0.98) 60%, rgba(94, 25, 9, 0.95) 65%, rgba(92, 64, 7, 0.95) 70%, rgba(84, 82, 6, 0.95) 75%, rgba(33, 79, 6, 0.95) 80%, rgba(7, 63, 83, 0.95) 85%, rgba(18, 22, 74, 0.95) 90%, rgba(56, 16, 74, 0.95) 95%);
+    border-radius: 25px;
+    width: 60vw;
+    height: auto;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    visibility: hidden;
+    z-index: 1;
+}
+
+
+form {
+    text-align: center;
+    position: relative;
+}
+
+#login-window h2 {
+    color: #D9D9D9;
+    margin: 40px;
+    font-family: 'Geologica', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    color: #D9D9D9;
+}
+
+#del-btn-div {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    height: 25px !important;
+}
+
+#del-btn {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border: 0px;
+    padding: 0px;
+    background-color: rgba(0, 0, 0, 0)
+}
+
+#del-btn-i {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: #d9d9d96f;
+    font-size: 25px;
+    text-shadow: 0px 2px 2px rgba(126, 134, 158, 0.25);
+}
+
+#del-btn:hover #del-btn-i {
+    font-size: 30px;
+    top: -3px;
+    left: -3px;
+    text-shadow: 0 0 20px #fff;
+    cursor: pointer;
+}
+
+.form-group {
+    position: relative;
+}
+
+#login-window label {
+    font-family: 'Geologica', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #D9D9D9;
+}
+
+#login-window input {
+    box-sizing: border-box;
+    margin: 10px 10px 30px 10px;
+    width: 200px;
+    height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0);
+    border: 2px solid rgba(217, 217, 217, 0.435);
+    border-radius: 15px;
+    font-family: 'Geologica', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    color: #D9D9D9;
+}
+
+#login-form label {
+    position: absolute;
+    left: 33px;
+    top: -12px;
+    padding: 0px 5px 0px 5px;
+    margin: 0px;
+    width: auto;
+    height: auto;
+    z-index: 1;
+
+}
+
+#reg-form label {
+    position: absolute;
+    left: 50px;
+    top: -12px;
+    padding: 0px 5px 0px 5px;
+    margin: 0px;
+    width: auto;
+    height: auto;
+    z-index: 1;
+
+}
+
+.submit,
+.reset {
+    /* margin-left: 10px!important;
+    margin-right: 10px!important; */
+    width: 100px !important;
+    height: 35px !important;
+    background: linear-gradient(140deg, rgba(26, 26, 26, 1) 0%, rgba(52, 52, 52, 1) 65%, rgba(217, 217, 217, 0.435) 100%) !important;
+    border: 0px !important;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.submit:hover,
+.reset:hover {
+    box-shadow: 0 0 20px #fff !important;
+}
+
+#reg-error {
+    color: #D9D9D9;
+    font-family: 'Geologica', sans-serif;
+}
+
+#login-error {
+    color: #D9D9D9;
+    font-family: 'Geologica', sans-serif;
+}

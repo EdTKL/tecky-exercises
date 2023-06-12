@@ -24,6 +24,8 @@ CREATE TABLE temp (
     id uuid DEFAULT uuid_generate_v4() primary key,
     user_id integer NOT NULL,
     content text NOT NULL,
+    star boolean,
+    favorite BOOLEAN DEFAULT false,
     foreign key (user_id) references users(id)
 );
 
