@@ -1,26 +1,23 @@
-// // fetchAllMemo()
+// Change the selector to select your memo input form
+const memo = document.querySelector('#memo-form');
 
-// // async function fetchAllMemo(){
-// //     let res = await fetch('allMemo')
-// //     let json = await res.json()
-// //     console.log(json)
-// //     if(json.isError){
-// //         alert(json.errMess)
-// //     }else{
-        
-// //     }
-// // };
-
-// const imgBtn = document.querySelector(".img-btn");
-
-// imgBtn.addEventListener("mouseenter", () => {
-//     document.querySelector(".img-btn-icon").style.color="aqua";
-//     document.querySelector(".img-btn").style.cursor="pointer";
-// })
-
-// imgBtn.addEventListener("mouseleave", () => {
-//     document.querySelector(".img-btn-icon").style.color="black";
-// })
+memo.addEventListener('submit', async (e) => {
+    e.preventDefault(); // Prevent the form from submitting synchronously
+    const form = e.target;
+    let formObj = {}
+    // Create your form object with the form inputs
+    // formObject["SomeCol"] = form.SomeCol.value;
+  
+    const res = await fetch('/memos', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formObject),
+    });
+  
+    // Clear the form here
+  })
 
 
 

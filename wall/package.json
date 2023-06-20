@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node-dev server.ts",
+    "start": "ts-node-dev main.ts",
     "test": "tsc -p . --noEmit"
   },
   "author": "",
