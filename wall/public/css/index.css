@@ -6,8 +6,12 @@ body{
 
 .navbar{
     background-color: grey;
-    opacity: 0.5;
+    opacity: 0.3;
     position: sticky;
+}
+
+a{
+    opacity: 1;
 }
 
 #main-container{
