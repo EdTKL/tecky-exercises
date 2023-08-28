@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;700;900&display=swap');
+
 /* SIDEBAR *//* SIDEBAR *//* SIDEBAR */
 .del-saved-btn{
     position: relative;
@@ -23,6 +26,35 @@
     text-shadow: 0 0 20px #fff;
 }
 
+
+/* PLAN *//* PLAN *//* PLAN */
+#fav-btn{
+    position: relative;
+    width: 25px;
+    height: 25px;
+    z-index: 10;
+}
+
+#fav-btn-i{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: #d9d9d96f;
+    font-size: 25px;
+    text-shadow: 0px 2px 2px rgba(126, 134, 158, 0.25);
+}
+
+#fav-btn:hover #fav-btn-i{
+    font-size: 30px;
+    top: -3px;
+    left: -2px;
+    text-shadow: 0 0 20px #fff;
+    cursor: pointer;
+}
+
+#fav-btn .fa-solid{
+    color: #d9d9d9;
+}
 
 /* TASKS *//* TASKS *//* TASKS */
 .del-btn{
@@ -68,16 +100,18 @@
     right: 130%;
     transform: translateY(-50%);
     z-index: 1;
-    width: 80px;
-    height: 40px;
+    width: 70px;
+    height: 35px;
     background-color: rgba(0, 0, 0, 0.33);
     color: #fff;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-    
     font-family: 'Geologica', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
 }
 
 #add-btn{
@@ -100,8 +134,8 @@
 
 #add-tip{
     visibility: hidden;
-    width: 105px;
-    height: 50px;
+    width: 95px;
+    height: 40px;
 }
 
 #add-btn:hover #add-btn-i{
@@ -212,4 +246,27 @@
 
 #ok-btn:hover #ok-tip{
     visibility: visible;
+}
+
+
+#gpt-X-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0);
+    border: 0px;
+    height: 25px;
+    width: 25px;
+    padding: 0px;
+}
+
+#gpt-X-btn-i{
+    font-size: 25px;
+    color: #d9d9d9;
+    text-shadow: 0px 2px 2px rgba(126, 134, 158, 0.25);
+}
+
+#gpt-X-btn:hover #gpt-X-btn-i{
+    font-size: 30px;
+    text-shadow: 0 0 20px #fff;
 }

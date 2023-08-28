@@ -1,10 +1,11 @@
 body{
     background-image: url("/assets/brickWall.jpg");
     background-size: 100%;
-    background-color: rgb(132, 42, 3);
+    background-color: rgb(17, 7, 2);
 }
 
 .navbar{
+<<<<<<< HEAD
     background-color: grey;
     opacity: 0.3;
     position: sticky;
@@ -12,6 +13,32 @@ body{
 
 a{
     opacity: 1;
+=======
+    background-color: rgba(48, 47, 47, 0.6)!important;
+    position: sticky;
+}
+
+.navbar-brand{
+    color: white;
+}
+
+.dropdown-menu{
+    z-index: 1;
+}
+
+#login{
+display: flex;
+flex-wrap: wrap;
+justify-content: flex-start;
+}
+
+#login>div{
+    margin: 5px;
+}
+
+#login label{
+    color: white;
+>>>>>>> bfee0fe8af387d4d29e437b3b98bdf73a3d6bf56
 }
 
 #main-container{
@@ -32,6 +59,7 @@ a{
     box-shadow: 10px 10px 15px rgb(35, 34, 34);
     position: relative;
     display: block;
+    z-index: 0;
 }
 
 .text{

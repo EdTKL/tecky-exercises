@@ -1,0 +1,29 @@
+-- show tables
+select * from users;
+select * from temp;
+select * from plans;
+select * from tasks;
+select * from results;
+
+-- insert demo1 data to tables
+INSERT INTO users (
+    name, email, password, created_at
+    ) VALUES (
+        'demo','demo@gmail.com','demo',CURRENT_TIMESTAMP
+        );
+
+INSERT INTO temp (
+    user_id,id,content,favorite
+) VALUES (
+    1,'723000ff-8bb6-4b2b-b7c5-fb8aab619ea3','{"en": "U2FsdGVkX188Aa3FRCIVtUuzyxsraPRsfhm6gbczaWkUdgyJk9gdvNF9Cns7G3lb4zZoA+yTSO5As62v9GVm28XqSIG0/DJkv6sHfoUjel6Mr3kZNsDL2DzWgYQqld0E7qRCiWJxqYWs7ClkpnWktRkVVqmuTMPTVlMiJ5rxFhfDdvuZTUT/EgOIS9GX8g2l0rWA+Ogla/8DpwL0sSa3yv3A7pEllZIjCxjZSeWO+3M="}',true
+);
+
+select content from temp where id='723000ff-8bb6-4b2b-b7c5-fb8aab619ea3';
+
+-- insert demo2 data to tables
+INSERT INTO temp (
+    user_id,id,content,favorite
+) VALUES (
+    1,'f62f42ac-91b2-4b4a-a91c-b698f2480863',' {"en":"U2FsdGVkX19SaOVaTzSqYu3jD6nJxz/lwO82KsoVftEEU0XSsP1KLvtuM5NBmszBO3qxm719eTR/GdMMk4vnyHKBgJXe0o2Px4lC0lkGV35ggEIeSBE6f7hg+IIHdSYWw6+5MWirr/RyqgfH+LsLewVHCY98RpqM+jEHYLXxJQyt5aMCE+Lxez8TuGj/0U/JLchymLXnmKDIe1ryf60dqqRi6LGPXsVyvk6zMdeQ4mNjzmmuBZiy8I9sR+BgeTBMBrFNmO279+QichacQ+Ej+5RZKwWPAQh0apT0tsbDh7aBvQxGjk4jEkDppkBPFSk1YaeSztwNRS3bQ+NxvB6gd5w5Bc0zkIAIwV4QrU4AKLv4wz07X/goNknVk2QQXjEcLKO3iZSK4MIKXucH2v3kNXj2Nof9j0Vy1w/itIlkQifw03NH8Uq7v4MlB3nF3D9EfAd1ojzi7aT1VgaO6vOJ9GELBrE7m3NjJATGFOzTD5ZRlJqUioBQ2zzd/bxapj90hEmX4UNx/TPyE5W4GPraz+f4Pf4fsFvZYuWMC75ah5Z3jfALYW16YuHOjICoftANlj/GIS2cMsS+8BvaUGwP8kX52QIP+WrzcXUkTZeNA4ujmwe1XL/9BArswbuv7U/V+cVEDr9mttaGKZB2SutcV46xDZtwVx7eKj6YEY3rCCfnxY6odczzFa5hfz6OKBIsi4gV7KJaIY50e8HekyY9FS85x5H9IyR8JuPS1LTI98lVUjNv7rr8cCH+NO+LBe8JV0bnAQDgvzPDQ5DP3Xz9dR6RQLgsTkswM3YRzwC3DaPiEPc+xuRwTByWWU+109aylc04vTjCKsSQ4te537CGPZh/kedg4GBxr8PIQirWzMB5An5PhPbxarPqfPDoEAsev6hGvlJcMHmzvoeORm2o3bKsgM/ImCt4agkiwkStwqOR8xfUlekAX0XeSSrmsXrB2CIAv7G5d5kbPYU9O04McIdeB1KKa4BBtA9ddkjms46SsgdNZV5BMSrdRDHYzkPPp6y4aZkoEUPSMEf+AKQQnkuXjzJhH8WRuvREwPiryK3nScwZ0M6bmxHb+wQHT3BmTXS4g1INKnj3gESL/TNSAltMl7oWLhpT/7DoKC/6zMxZ/7g2SFkFGJ4qe4MQiw54n7lwXO0EdUtVS4Ml91NOSDeKzfi1wz7hVCHFnodX9KA6X7a8aOTN3/DALc27zSOYN0dDL3jwDVyhHUXwfshl481nQdLQbsIlQv16ynaz1EZenFf1c5bsgMNwhR1OwAaUlXmRCWt+84SVth2rEClyiR6RQLgsTkswM3YRzwC3DaPoHbUvcV2M6l5K1oXwUSbR3w9gPYlj28COTtpUOmRsGR3uAJbAc0VGLnrHDVGUBb/wJtYGjRX/34o+FSwaRey6J4Vp4DZ0m1jMT79Rdl8u46lUTn1M8Uis+SyvS2hE1PNVUjNv7rr8cCH+NO+LBe8JV0bnAQDgvzPDQ5DP3Xz9dR6RQLgsTkswM3YRzwC3DaNAUqT/GxMw77tDXvMv+bBimWOQUGPayJb7Nqmww/StRCLGmkr4IOdBiaU2jioxKJI5R3F17Q5cM1lLqIcSuhAQNLJC21YWh/SvKp57nNDXVqFe2NT6p7whVvklybg8c1rwLhnn1dp1uMW22hftCqFi0h6Bk7sWSmyZueQSasoYTzrIrPyNv/qKjYepSFhRtesQr7YkYbw+XJ+7xaGxIeswrk8ebjrAGe/C4nxs1N/6l+5wqGV7aCzLuXdp0BvvbYwU9U8EjYRq2bnuWpaYmKlwZWuYTutN9gl8bb+GIbs+qo+4uwfAjNIkC7Zo8a4Wf85USA8rDgxcwZA5pPkKYdItRtjM7++dYDyCYKSV9p1Rr25IO6OlWJ/192oU7fuKfGx5An5PhPbxarPqfPDoEAsev6hGvlJcMHmzvoeORm2o3bKsgM/ImCt4agkiwkStwqOR8xfUlekAX0XeSSrmsXrB2CIAv7G5d5kbPYU9O04McA6dP6IzKMzSCsUM53dUN4M6HHeHM3yhBUPDuk8plVUFp6y4aZkoEUPSMEf+AKQQnjNuNn7sf6i7WIEW/C7+jmE7Ptys1g9ngPs/xe9Mdzw3TjeSBb4EQEtm+kVpeDxMMg=="}',true
+);
+select content from temp where id='f62f42ac-91b2-4b4a-a91c-b698f2480863';
