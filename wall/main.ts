@@ -63,8 +63,8 @@ app.post("/login", async (req, res) => {
   const userList: User[] = await jsonfile.readFile(path.resolve(__dirname,"users.json"));
   if(userList.some(user => user.username === req.body.username && user.password === req.body.password)){
     req.session.user = req.body.username;
-    console.log("login succeeded");
-    res.redirect(path.resolve(__dirname,"/admin.html"));
+    console.log("login ok");
+    res.redirect(path.resolve(__dirname,"admin.html"));
   } else {
     console.log("login failed");
     res.redirect("/");
@@ -112,10 +112,10 @@ const isLoggedIn = (
 app.use(isLoggedIn, express.static("protected"));
 
 
-app.use((_, res) => {
-  res.status(404);
-  res.sendFile(path.resolve(__dirname, "public/404.html"));
-})
+// app.use((_, res) => {
+//   res.status(404);
+//   res.sendFile(path.resolve(__dirname, "public/404.html"));
+// })
 
 
 const PORT = 2023;

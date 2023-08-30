@@ -5,15 +5,6 @@ body{
 }
 
 .navbar{
-<<<<<<< HEAD
-    background-color: grey;
-    opacity: 0.3;
-    position: sticky;
-}
-
-a{
-    opacity: 1;
-=======
     background-color: rgba(48, 47, 47, 0.6)!important;
     position: sticky;
 }
@@ -38,7 +29,6 @@ justify-content: flex-start;
 
 #login label{
     color: white;
->>>>>>> bfee0fe8af387d4d29e437b3b98bdf73a3d6bf56
 }
 
 #main-container{

@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es2021",
+        "lib": ["es2021", "dom"],
+        "sourceMap": true,
+        "allowJs": true,
+        "jsx": "react",
+        "esModuleInterop":true,
+        "moduleResolution": "node",
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "noUnusedLocals": true
+    },
+    "exclude": [
+        "node_modules",
+        "build",
+        "scripts",
+        "index.js",
+        "public"
+    ]
+}
