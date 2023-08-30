@@ -18,6 +18,7 @@
     <title>Wall</title>
   </head>
   <body>
+    <!-- Navbar Navbar Navbar Navbar Navbar Navbar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Memo Wall</a>
@@ -34,16 +35,18 @@
         </form>
       </div>
     </nav>
-    <!-- Memos start here -->
+    <!-- Memos Memos Memos Memos Memos Memos -->
     <div id="main-container">
       <div class="memo">
-        <form id="memo-form" action="/memo" method="POST" enctype="multipart/form-data">
+        <form class="memo-form" action="/memo" method="POST" enctype="multipart/form-data">
           <textarea name="text" class="text" placeholder="Enter"></textarea>
-          <div>
-            <i class="bi bi-image img-btn-icon"></i>
+          <label class="img-label">
             <input class="img-btn" type="file" name="image" />
-          </div>
-          <button class="submit" type="submit"></button>
+            <i class="bi bi-image" aria-hidden="true"></i>
+          </label>
+          <button class="btn submit" type="submit">
+            <i class="bi bi-send"></i>
+          </button>
         </form>
       </div>
     </div>

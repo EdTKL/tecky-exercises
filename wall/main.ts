@@ -71,9 +71,20 @@ app.post("/login", async (req, res) => {
   }
 })
 
+app.post("/logout", async (req, res) => {
+  const userList: User[] = await jsonfile.readFile(path.resolve(__dirname,"users.json"));
+  if(userList.some(user => user.username === req.session.user)){
+    req.session.destroy((err) => {
+      console.log(err);
+      res.redirect("/");
+    }
+    )
+    console.log("logout succeeded");
+  }
+})
+
 app.post("/memo", async (req: Request, res: Response) => {
   const {fields, files} = await formParse(form, req);
-  console.log(files)
   const memos: Record[]  = await jsonfile.readFile(path.resolve(__dirname,"memos.json"));
   memos.push({
     text: fields.text as string,
@@ -118,7 +129,7 @@ app.use((_, res) => {
 })
 
 
-const PORT = 2023;
+const PORT = 8080;
 
 app.listen(PORT, () => {
     console.log(`Listening at http://localhost:${PORT}/`);    

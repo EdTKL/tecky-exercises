@@ -61,31 +61,30 @@ justify-content: flex-start;
     border: 0;
 }
 
-.img-btn-icon{ 
-    position: absolute;
-    right: 5px;
-    top: 0px;
-}
-
 /* .img-btn-icon:hover{ 
     color: aqua;
     cursor: pointer;
 
 } */
 
-.img-btn{
-    opacity: 0.5;
-    height: 14px;
-    width: 16px;
+.img-label {
+    display: inline-block;
+    cursor: pointer;
     position: absolute;
-    right: 5px;
-    top: 5px;
+    top: 0px;
+    right: 2px;
+}
+
+.img-btn{
+    display: none;
 }
 
 .submit{
+    display: inline-block;
+    width: fit-content;
+    height: fit-content;
+    padding: 0;
     position: absolute;
-    height: 16px;
-    width: 16px;
-    left: 5px;
-    bottom: 5px;
+    bottom: -2px;
+    right: 0px;
 }
