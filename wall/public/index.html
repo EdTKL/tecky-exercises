@@ -18,35 +18,24 @@
     <title>Wall</title>
   </head>
   <body>
+    <!-- Navbar Navbar Navbar Navbar Navbar Navbar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Memo Wall</a>
         <form id="login" action="/login" method="POST">
           <div>
             <label for="username">Username</label>
-            <input id="username" name="username" type="text" />
+            <input id="username" name="username" type="text"/>
           </div>
           <div>
             <label for="password">Password</label>
             <input id="password" name="password" type="password" />
           </div>
-          <button type="submit">Login</button>
+          <button type="submit" class="btn btn-light btn-sm">Login</button>
         </form>
       </div>
     </nav>
-    <!-- Memos start here -->
-    <div id="main-container">
-      <div class="memo">
-        <form id="memo-form" action="/memo" method="POST" enctype="multipart/form-data">
-          <textarea name="text" class="text" placeholder="Enter"></textarea>
-          <input type="file" name="image"></input>
-<!--         <i class="bi bi-image img-btn-icon"></i>    
-            <input class="img-btn" type="file" name="image" /> -->
-          <button class="submit" type="submit"></button>
-          
-        </form>
-      </div>
-    </div>
+    <!-- Memos Memos Memos Memos Memos Memos -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"

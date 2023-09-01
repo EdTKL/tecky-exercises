@@ -27,6 +27,7 @@
     "formidable": "^2.1.1",
     "jsonfile": "^6.1.0",
     "pg": "^8.11.0",
-    "populate-env": "^2.0.0"
+    "populate-env": "^2.0.0",
+    "sass": "^1.66.1"
   }
 }

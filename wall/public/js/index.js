@@ -1,29 +1,28 @@
-// Change the selector to select your memo input form
-const memo = document.querySelector('#memo-form');
+const login = document.getElementById("login");
 
-memo.addEventListener('submit', async (e) => {
-    e.preventDefault(); // Prevent the form from submitting synchronously
-    const form = e.target.text.value;
-    let formObj = {text: form}
-    // Create your form object with the form inputs
-    // formObject["SomeCol"] = form.SomeCol.value;
-  
-    const res = await fetch('/memo', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formObj),
-    });
+login.addEventListener("submit", async (e) => {
+  e.preventDefault(); // Prevent the form from submitting synchronously
+  // Create your form object with the form inputs
+  // formObject["SomeCol"] = form.SomeCol.value;
+  const form = e.target;
+  const formObj = {
+    username: form.username.value,
+    password: form.password.value,
+  };
 
-    console.log(await res.json());
-  
-    // Clear the form here
-  })
-
-
-
-// document.addEventListener('mouseover',function(e){
-//     var cursor = e.target.style.cursor;
-//     console.log(cursor);
-// },false);
+  const res = await fetch("/login", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(formObj),
+  });
+  const result = await res.json();
+  if (res.ok) {
+      location.assign(result.url);
+  } else if (res.status === 401) {
+    alert(result.err);
+  }
+  // Clear the form here
+  form.reset();
+});
